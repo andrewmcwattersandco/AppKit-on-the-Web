@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, viewport-fit=cover">
+    <title>AppKit on the Web</title>
+    <base href="./">
+    <link rel="stylesheet" href="stylesheets/AppKit.css">
+  </head>
+  <body style="margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="appkit-backdrop"></div>
+    <form class="appkit-alert" style="width: 260px; --height: 265px;">
+      <!-- <img class="header-image" src="images/No App Icon@2x.png" alt="No App Icon" width="64" height="64"> -->
+      <img class="header-image" src="images/Passwords_Normal@2x.png" alt="Passwords Icon" width="64" height="64" style="padding: 0;">
+      <h1 class="title">
+        Sign into <script>document.write(location.host);</script>
+      </h1>
+      <p class="description">
+        Sign in to continue.
+      </p>
+      <input type="email" class="appkit-text-field rounded shadowed" name="email" autocomplete="username" required placeholder="Email" />
+      <input type="password" class="appkit-text-field rounded shadowed" name="password" autocomplete="current-password" required placeholder="Password" />
+      <br>
+      <div class="group">
+        <input type="submit" class="appkit-button primary" value="Sign In" />
+      </div>
+      <p class="description">
+        <a href="/forgotpassword">Forgot your password?</a>
+      </p>
+      <p class="description" style="margin-bottom: 0;">
+        Don't have an account? <a href="/createaccount">Create one now.</a>
+      </p>
+    </form>
+  </body>
+</html>
