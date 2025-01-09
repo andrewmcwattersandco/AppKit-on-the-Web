@@ -53,6 +53,14 @@
     border-bottom-width: 1px;
 }
 
+.appkit-form-list-row:first-of-type:has(+ .appkit-form-list-row-spacing),
+.appkit-form-list-row-spacing + .appkit-form-list-row:last-of-type,
+.appkit-form-list-row:only-of-type {
+  /* Group */
+    /* Background Style */
+    border-radius: 6px;
+}
+
 .appkit-form-list-row-spacing {
   height: 10px;
 }
