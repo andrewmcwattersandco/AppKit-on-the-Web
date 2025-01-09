@@ -1,0 +1,58 @@
+.appkit-form-list-row {
+  /* Padding */
+  padding: 10px;
+
+  /* 3.4. Text-based Markers: the list-style-type property */
+  list-style-type: none;
+
+  /* font-family: SFPro-Regular; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.85);
+  line-height: 16px;
+
+  /* Group */
+    /* Background Style */
+    background: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.04);
+
+    /* Mask */
+    border-width: 0 1px;
+}
+
+.appkit-form-list-row:not(:last-of-type):not(:has(+ .appkit-form-list-row-spacing))::after {
+  display: block;
+  position: relative;
+  bottom: -10px;
+  height: 1px;
+  content: "";
+
+  /* Separator */
+  background: rgba(0,0,0,0.02);
+  border-radius: 0.5px;
+}
+
+.appkit-form-list-row:first-of-type,
+.appkit-form-list-row-spacing + .appkit-form-list-row {
+  /* Group */
+    /* Background Style */
+    border-radius: 6px 6px 0 0;
+
+    /* Mask */
+    border-top-width: 1px;
+}
+
+.appkit-form-list-row:last-of-type,
+.appkit-form-list-row:has(+ .appkit-form-list-row-spacing) {
+  /* Group */
+    /* Background Style */
+    border-radius: 0 0 6px 6px;
+
+    /* Mask */
+    border-bottom-width: 1px;
+}
+
+.appkit-form-list-row-spacing {
+  height: 10px;
+}
