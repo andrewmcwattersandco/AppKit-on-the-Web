@@ -76,6 +76,14 @@ button.appkit-form-list-row:active {
               inset 0 -1px rgba(0, 0, 0, 0.02);
 }
 
+a.appkit-form-list-row:last-child:active,
+a.appkit-form-list-row:has(+ .appkit-form-list-row-spacing):active,
+button.appkit-form-list-row:last-child:active,
+button.appkit-form-list-row:has(+ .appkit-form-list-row-spacing):active {
+  /* Separator */
+  box-shadow:       0 -1px rgba(0, 0, 0, 0.05);
+}
+
 a.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing)):active::after,
 button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing)):active::after {
   /* Separator */
