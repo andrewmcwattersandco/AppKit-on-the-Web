@@ -64,3 +64,10 @@
 .appkit-form-list-row-spacing {
   height: 10px;
 }
+
+a.appkit-form-list-row:active,
+button.appkit-form-list-row:active {
+  /* Group */
+    /* Background Style */
+    background: rgba(0, 0, 0, 0.05);
+}
