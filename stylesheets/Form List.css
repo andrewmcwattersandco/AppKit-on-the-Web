@@ -21,7 +21,7 @@
     border-width: 0 1px;
 }
 
-.appkit-form-list-row:not(:last-of-type):not(:has(+ .appkit-form-list-row-spacing))::after {
+.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
   display: block;
   position: relative;
   bottom: -10px;
@@ -33,7 +33,7 @@
   border-radius: 0.5px;
 }
 
-.appkit-form-list-row:first-of-type,
+.appkit-form-list-row:first-child,
 .appkit-form-list-row-spacing + .appkit-form-list-row {
   /* Group */
     /* Background Style */
@@ -43,7 +43,7 @@
     border-top-width: 1px;
 }
 
-.appkit-form-list-row:last-of-type,
+.appkit-form-list-row:last-child,
 .appkit-form-list-row:has(+ .appkit-form-list-row-spacing) {
   /* Group */
     /* Background Style */
@@ -53,9 +53,9 @@
     border-bottom-width: 1px;
 }
 
-.appkit-form-list-row:first-of-type:has(+ .appkit-form-list-row-spacing),
-.appkit-form-list-row-spacing + .appkit-form-list-row:last-of-type,
-.appkit-form-list-row:only-of-type {
+.appkit-form-list-row:first-child:has(+ .appkit-form-list-row-spacing),
+.appkit-form-list-row-spacing + .appkit-form-list-row:last-child,
+.appkit-form-list-row:only-child {
   /* Group */
     /* Background Style */
     border-radius: 6px;
