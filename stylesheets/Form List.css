@@ -70,4 +70,14 @@ button.appkit-form-list-row:active {
   /* Group */
     /* Background Style */
     background: rgba(0, 0, 0, 0.05);
+
+  /* Separator */
+  box-shadow: inset 0  1px rgba(0, 0, 0, 0.02),
+              inset 0 -1px rgba(0, 0, 0, 0.02);
+}
+
+a.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after,
+button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
+  /* Separator */
+  background: transparent;
 }
