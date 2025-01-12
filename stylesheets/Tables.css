@@ -1,0 +1,66 @@
+.appkit-table {
+  border-collapse: collapse;
+}
+
+.appkit-table thead tr th {
+  position: relative;
+
+  /* 5.1. Pointer interaction */
+  cursor: default;
+
+  /* 6.1. Controlling content selection */
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
+
+  /* Separator */
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+
+  /* Label */
+  padding: 7px 5px;
+  text-align: left;
+  /* font-family: SFPro-Regular; */
+  font-family: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  color: rgba(0,0,0,0.50);
+  line-height: 14px;
+}
+
+.appkit-table thead tr th::after {
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 2 * 4px);
+  content: "";
+
+  /* Right Accessory */
+    /* Separator */
+    background: rgba(0,0,0,0.03);
+}
+
+.appkit-table tbody tr td {
+  padding: 2px 5px;
+
+  /* Label */
+  /* font-family: SFPro-Regular; */
+  font-family: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-size: 13px;
+  color: rgba(0,0,0,0.50);
+  line-height: 16px;
+}
+
+.appkit-table tbody tr td:first-child {
+  /* Label */
+  color: rgba(0,0,0,0.85);
+}
+
+.appkit-table tbody tr:nth-child(even) {
+  /* Background */
+  background: rgba(0,0,0,0.02);
+}
