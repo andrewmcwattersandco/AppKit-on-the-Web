@@ -110,10 +110,6 @@
   text-decoration: none;
 }
 
-.appkit-alert a:hover {
-  text-decoration: underline;
-}
-
 .appkit-alert .appkit-text-field,
 .appkit-alert .appkit-button {
   margin-bottom: 4px;
