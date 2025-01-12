@@ -62,6 +62,9 @@
 }
 
 .appkit-form-list-row-spacing {
+  /* 3.4. Text-based Markers: the list-style-type property */
+  list-style-type: none;
+
   height: 10px;
 }
 
