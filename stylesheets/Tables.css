@@ -2,6 +2,12 @@
   border-collapse: collapse;
 }
 
+.appkit-table thead {
+  /* Header View */
+  background: rgba(255,255,255,0.80);
+  backdrop-filter: blur(30px);
+}
+
 .appkit-table thead tr th {
   position: relative;
 
