@@ -19,7 +19,10 @@
   user-select: none;
 
   /* Separator */
-  border-bottom: 1px solid rgba(0,0,0,0.03);
+  /* Sketch */
+  /* border-bottom: 1px solid rgba(0,0,0,0.03); */
+  /* Digital Color Meter */
+  border-bottom: 1px solid rgba(0,0,0,0.099);
 
   /* Label */
   padding: 7px 5px;
@@ -45,7 +48,10 @@
 
   /* Right Accessory */
     /* Separator */
-    background: rgba(0,0,0,0.03);
+    /* Sketch */
+    /* background: rgba(0,0,0,0.03); */
+    /* Digital Color Meter */
+    background: rgba(0,0,0,0.099);
 }
 
 .appkit-table tbody tr td {
