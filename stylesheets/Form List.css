@@ -55,6 +55,7 @@
 
 .appkit-form-list-row:first-child:has(+ .appkit-form-list-row-spacing),
 .appkit-form-list-row-spacing + .appkit-form-list-row:last-child,
+.appkit-form-list-row-spacing + .appkit-form-list-row:has(+ .appkit-form-list-row-spacing),
 .appkit-form-list-row:only-child {
   /* Group */
     /* Background Style */
