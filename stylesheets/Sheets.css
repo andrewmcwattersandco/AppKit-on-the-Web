@@ -1,0 +1,22 @@
+.appkit-sheet {
+  /* Margins */
+  padding: 20px;
+
+  /* Inner Shadow */
+  box-shadow: inset 0 0 3px 0 rgba(255,255,255,0.10);
+  border-radius: 10px;
+
+  /* Fill */
+  background: #FFFFFF;
+  border-radius: 10px;
+
+  /* Shadow */
+  background: #FFFFFF;
+  /* box-shadow: 0 8px 40px 0 rgba(0,0,0,0.25), 0 0 3px 0 rgba(0,0,0,0.55); */
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,0.25), 0 0 1.5px 0 rgba(0,0,0,0.55);
+  border-radius: 10px;
+
+  /* Animation */
+  opacity: 0;
+  animation: appkit-fadeInTop 0.32s cubic-bezier(0.4, 0, 0.6, 1) 0.16s forwards;
+}
