@@ -19,4 +19,45 @@
   /* Animation */
   opacity: 0;
   animation: appkit-fadeInTop 0.32s cubic-bezier(0.4, 0, 0.6, 1) 0.16s forwards;
+
+  overflow: hidden;
+}
+
+.appkit-sheet:has(> .sidebar) {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+
+  /* Margins */
+  padding: 0;
+
+  /* Sidebar */
+  background: rgba(246,246,246,0.84);
+  backdrop-filter: blur(30px) saturate(200%);
+}
+
+.appkit-sheet:has(> .sidebar) > .sidebar {
+  /* Margins */
+  padding: 20px;
+}
+
+.appkit-sheet:has(> .sidebar) > .content-area::before {
+  display: block;
+  position: relative;
+  top: -20px;
+  left: -21px;
+  width: 1px;
+  height: calc(100% + 2 * 20px);
+  content: "";
+
+  /* Divider Edge */
+  background: rgba(0,0,0,0.10);
+  box-shadow: -0.5px 0 0.25px rgba(0,0,0,0.05);
+}
+
+.appkit-sheet:has(> .sidebar) > .content-area {
+  /* Margins */
+  padding: 20px;
+
+  /* Content Area */
+  background: #FFFFFF;
 }
