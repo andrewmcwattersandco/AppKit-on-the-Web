@@ -93,3 +93,55 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   /* Separator */
   background: transparent;
 }
+
+/* Footer */
+.appkit-form-list-row:has(+ .appkit-form-list-row.footer)::after {
+  display: none;
+}
+
+.appkit-form-list-row.footer {
+  padding: 0;
+  padding-bottom: 0;
+  border-top-width: 1px;
+  background: rgba(0,0,0,0.05);
+}
+
+.appkit-form-list-row.footer button.add,
+.appkit-form-list-row.footer button.remove {
+  border: 0;
+  padding: 2px 7px 4px;
+  position: relative;
+  line-height: 16px;
+  color: rgba(0,0,0,0.55);
+  background-color: transparent;
+  font-size: 17px;
+}
+
+.appkit-form-list-row.footer button.add:has(+ button.remove)::after {
+  display: inline-block;
+  position: absolute;
+  top: 2px;
+  right: 0;
+  width: 1px;
+  height: calc(100% - 2 * 2px);
+  content: "";
+
+  /* Right Accessory */
+    /* Separator */
+    /* Sketch */
+    /* background: rgba(0,0,0,0.03); */
+    /* Digital Color Meter */
+    background: rgba(0,0,0,0.099);
+}
+
+.appkit-form-list-row.footer button.add:active,
+.appkit-form-list-row.footer button.remove:active {
+  /* Digital Color Meter */
+  color: rgba(0,0,0,0.7);
+}
+
+.appkit-form-list-row.footer button.add:disabled,
+.appkit-form-list-row.footer button.remove:disabled {
+  /* Digital Color Meter */
+  color: rgba(0,0,0,0.22);
+}
