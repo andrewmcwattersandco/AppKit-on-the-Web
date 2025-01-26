@@ -31,15 +31,17 @@
 
 .appkit-sheet:has(.sidebar),
 .appkit-sheet:has(.sidebar) form {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-
   /* Margins */
   padding: 0;
 
   /* Sidebar */
   background: rgba(246,246,246,0.84);
   backdrop-filter: blur(30px) saturate(200%);
+}
+
+.appkit-sheet:has(.sidebar):not(:has(form)) {
+  display: grid;
+  grid-template-columns: 200px 1fr;
 }
 
 dialog.appkit-sheet:has(.sidebar):not([open]) {
