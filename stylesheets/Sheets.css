@@ -47,9 +47,9 @@ dialog.appkit-sheet:has(> .sidebar):not([open]) {
 
 .appkit-sheet:has(> .sidebar) > .content-area::before {
   display: block;
-  position: relative;
+  position: absolute;
   top: -20px;
-  left: -21px;
+  left: -1px;
   width: 1px;
   height: calc(100% + 2 * 20px);
   content: "";
@@ -65,4 +65,6 @@ dialog.appkit-sheet:has(> .sidebar):not([open]) {
 
   /* Content Area */
   background: #FFFFFF;
+
+  position: relative;
 }
