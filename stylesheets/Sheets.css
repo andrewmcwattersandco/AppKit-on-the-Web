@@ -71,6 +71,10 @@ dialog.appkit-sheet:has(> .sidebar):not([open]) {
   flex-direction: column;
 }
 
+.appkit-sheet .scroll-view {
+  flex-grow: 1;
+}
+
 .appkit-sheet .scroll-view,
 .appkit-sheet .confirmation-buttons {
   /* Margins */
