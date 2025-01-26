@@ -24,7 +24,7 @@
   overflow: hidden;
 }
 
-.appkit-sheet:has(.sidebar),
+.appkit-sheet:has(.sidebar):not(:has(form)),
 .appkit-sheet:has(.sidebar) form {
   display: grid;
   grid-template-columns: 200px 1fr;
