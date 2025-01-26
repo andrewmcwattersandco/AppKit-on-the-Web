@@ -61,10 +61,24 @@ dialog.appkit-sheet:has(> .sidebar):not([open]) {
 
 .appkit-sheet:has(> .sidebar) > .content-area {
   /* Margins */
-  padding: 20px;
+  /* padding: 20px; */
 
   /* Content Area */
   background: #FFFFFF;
 
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.appkit-sheet .scroll-view,
+.appkit-sheet .confirmation-buttons {
+  /* Margins */
+  padding: 20px;
+}
+
+.appkit-sheet .confirmation-buttons {
+  /* background: rgba(0,0,0,0.03); */
+  /* border-radius: 0.5px; */
+  border-top: 1px solid rgba(0,0,0,0.03);
 }
