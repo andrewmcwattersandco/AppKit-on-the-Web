@@ -39,7 +39,8 @@
   backdrop-filter: blur(30px) saturate(200%);
 }
 
-.appkit-sheet:has(.sidebar):not(:has(form)) {
+.appkit-sheet:has(.sidebar):not(:has(form)),
+.appkit-sheet:has(.sidebar) form {
   display: grid;
   grid-template-columns: 200px 1fr;
 }
