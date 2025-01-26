@@ -20,6 +20,7 @@
   opacity: 0;
   animation: appkit-fadeInTop 0.32s cubic-bezier(0.4, 0, 0.6, 1) 0.16s forwards;
 
+  border-style: none;
   overflow: hidden;
 }
 
