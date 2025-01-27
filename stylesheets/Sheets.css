@@ -103,6 +103,10 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   content: "";
 }
 
+.appkit-sheet .scroll-view::-webkit-scrollbar {
+  display: none;
+}
+
 .appkit-sheet .scroll-view,
 .appkit-sheet .confirmation-buttons {
   /* Margins */
