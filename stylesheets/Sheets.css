@@ -99,7 +99,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   top: -20px;
   left: 0;
   width: 1px;
-  height: calc(100% + 20px + 1px);
+  height: calc(100% + 20px + 0.5px);
   content: "";
 }
 
