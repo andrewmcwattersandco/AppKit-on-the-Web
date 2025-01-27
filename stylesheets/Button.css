@@ -18,6 +18,9 @@
   border-radius: 5px;
 }
 
+.appkit-button.secondary {
+}
+
 .appkit-button.primary {
   /* Push Button Label */
     /* Label */
