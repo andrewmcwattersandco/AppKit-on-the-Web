@@ -88,6 +88,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
 
 .appkit-sheet .scroll-view {
   position: relative;
+  overflow: scroll;
   flex-grow: 1;
   overscroll-behavior: contain;
 }
