@@ -87,7 +87,19 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
 }
 
 .appkit-sheet .scroll-view {
+  position: relative;
   flex-grow: 1;
+  overscroll-behavior: contain;
+}
+
+.appkit-sheet .scroll-view::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  content: "";
 }
 
 .appkit-sheet .scroll-view,
