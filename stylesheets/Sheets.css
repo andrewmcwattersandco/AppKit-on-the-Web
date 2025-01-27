@@ -78,6 +78,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   /* padding: 20px; */
 
   /* Content Area */
+  height: 100%;
   background: #FFFFFF;
 
   position: relative;
