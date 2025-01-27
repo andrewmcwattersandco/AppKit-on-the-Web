@@ -73,7 +73,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   box-shadow: -0.5px 0 0.25px rgba(0,0,0,0.05);
 }
 
-.appkit-sheet:has(.sidebar) .content-area {
+.appkit-sheet .content-area {
   /* Margins */
   /* padding: 20px; */
 
