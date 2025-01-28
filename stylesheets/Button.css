@@ -18,6 +18,11 @@
   border-radius: 5px;
 }
 
+.appkit-button:active {
+  /* base */
+  background: #F0F0F0;
+}
+
 .appkit-button.secondary {
 }
 
