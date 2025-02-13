@@ -110,6 +110,8 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
       /* base */
       border: 0.5px solid rgba(0,0,0,0.03);
       border-radius: 6px;
+      background-color: transparent;
+      outline-style: none;
 }
 
 /* Header */
