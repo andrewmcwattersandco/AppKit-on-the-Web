@@ -114,6 +114,12 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
       outline-style: none;
 }
 
+.appkit-form-list-row input[type="number"]::-webkit-inner-spin-button {
+  /* Stepper */
+    /* Control / Stepper */
+    margin-left: 4px;
+}
+
 /* Header */
 .appkit-form-list-row-header {
   /* font-family: SFPro-Regular; */
