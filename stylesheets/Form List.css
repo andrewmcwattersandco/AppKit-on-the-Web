@@ -110,8 +110,8 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
       /* base */
       border: 0.5px solid rgba(0,0,0,0.03);
       border-radius: 6px;
-      padding-top: 3px;
-      padding-bottom: 4px;
+      padding-top: 2px;
+      padding-bottom: 3px;
       background-color: transparent;
       outline-style: none;
 }
@@ -119,7 +119,7 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
 .appkit-form-list-row input[type="number"]::-webkit-inner-spin-button {
   /* Stepper */
     /* Control / Stepper */
-    margin-left: 4px;
+    margin-left: 3px;
 }
 
 /* Header */
