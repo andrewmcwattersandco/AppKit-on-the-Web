@@ -49,7 +49,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   display: none;
 }
 
-.appkit-sheet > form[method="dialog"] {
+.appkit-sheet > form {
   width: 100%;
   height: 100%;
 }
