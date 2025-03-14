@@ -130,6 +130,7 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   font-size: 13px;
   font-weight: 600;
   margin-inline-start: 11px;
+  margin-inline-end: 11px;
 }
 
 /* Footer */
