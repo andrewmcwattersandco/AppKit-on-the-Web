@@ -5,8 +5,14 @@
     <!-- https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
     <meta name="viewport" content="user-scalable=no, width=device-width, viewport-fit=cover">
     <title>AppKit on the Web</title>
-    <base href="./">
-    <link rel="stylesheet" href="/stylesheets/AppKit.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const base = document.createElement('base');
+        base.href = location.hostname === 'localhost' ? './' : '/AppKit-on-the-Web/';
+        document.head.appendChild(base);
+      });
+    </script>
+    <link rel="stylesheet" href="./stylesheets/AppKit.css">
   </head>
   <body style="margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;">
     <div class="appkit-backdrop"></div>
