@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html -->
+    <meta name="viewport" content="user-scalable=no, width=device-width, viewport-fit=cover">
+    <title>AppKit on the Web</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const base = document.createElement('base');
+        base.href = location.hostname === 'localhost' ? './' : '/AppKit-on-the-Web/';
+        document.head.appendChild(base);
+      });
+    </script>
+    <link rel="stylesheet" href="../stylesheets/AppKit.css">
+  </head>
+  <body style="margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="appkit-backdrop" style="z-index: -1;"></div>
+    <div class="appkit-sheet" style="width: 672px; height: 425px;">
+      <div class="sidebar">
+      </div>
+      <div class="content-area">
+        <div class="scroll-view">
+        </div>
+        <div class="confirmation-buttons" style="text-align: right;">
+          <button style="margin-right: 8px;">Cancel</button>
+          <button>Save</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
