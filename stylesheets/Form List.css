@@ -163,12 +163,11 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
 
 .appkit-pop-up-button {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .appkit-pop-up-button .indicator {
-  display: inline-block;
-  position: absolute;
-  margin-top: 2px;
   margin-left: calc(-2px + -16px);
   pointer-events: none;
 
