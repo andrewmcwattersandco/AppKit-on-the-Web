@@ -10,7 +10,11 @@ class NSPopUpButton extends HTMLElement {
 
   render() {
     const { shadowRoot } = this;
-    shadowRoot.innerHTML = /* html */ `<select></select><slot></slot>`;
+    shadowRoot.innerHTML = /* html */ `
+      <link rel="stylesheet" href="../stylesheets/Form List.css">
+      <select class="appkit-pop-up-button"></select>
+      <slot></slot>
+    `;
 
     const select  = shadowRoot.querySelector('select');
     const options = this.querySelectorAll('option');
