@@ -1,13 +1,7 @@
 class NSPopUpButton extends HTMLElement {
   constructor() {
     super();
-    this.liked = false;
     this.attachShadow({mode: 'open'});
-    this.render();
-  }
-
-  setLiked(value) {
-    this.liked = value;
     this.render();
   }
 
@@ -15,16 +9,14 @@ class NSPopUpButton extends HTMLElement {
   }
 
   render() {
-    const { liked, shadowRoot } = this;
+    const { shadowRoot } = this;
+    shadowRoot.innerHTML = /* html */ `<select></select><slot></slot>`;
 
-    if (liked) {
-      shadowRoot.innerHTML = 'You liked this.'
-      return;
-    }
-
-    shadowRoot.innerHTML = `<button onclick="this.getRootNode().host.setLiked(true)">
-  Like
-</button>`;
+    const select  = shadowRoot.querySelector('select');
+    const options = this.querySelectorAll('option');
+    options.forEach(option => {
+      select.appendChild(option);
+    });
   }
 }
 
