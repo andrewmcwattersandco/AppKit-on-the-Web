@@ -131,7 +131,7 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
     margin-left: 3px;
 }
 
-select.appkit-pop-up-button {
+.appkit-pop-up-button select {
   appearance: none;
 
   /* Label */
@@ -149,15 +149,38 @@ select.appkit-pop-up-button {
   padding-top: 2px;
   padding-left: 11px;
   padding-bottom: 2px;
+  padding-right: calc(16px - 5px);
 }
 
-select.appkit-pop-up-button:hover {
+.appkit-pop-up-button select:hover {
   /* .appkit-button */
   /* base */
   background: #FFFFFF;
   border: 0.5px solid rgba(0,0,0,0.02);
   box-shadow: 0 0.25px 0.25px 0 rgba(0,0,0,0.15), 0 1px 0.75px 0 rgba(0,0,0,0.05);
   border-radius: 5px;
+}
+
+.appkit-pop-up-button {
+  position: relative;
+}
+
+.appkit-pop-up-button .indicator {
+  display: inline-block;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: calc(-2px + -16px);
+  pointer-events: none;
+
+  /* Mask */
+  width: 16px;
+  height: 16px;
+  background: rgba(0,0,0,0.02);
+  border-radius: 4px;
+}
+
+.appkit-pop-up-button:hover .indicator {
+  background-color: transparent;
 }
 
 /* Header */
