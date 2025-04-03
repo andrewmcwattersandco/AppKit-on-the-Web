@@ -75,8 +75,8 @@ class NSPopUpButton extends HTMLElement {
     `;
 
     const select = shadowRoot.querySelector('select');
-    const slot = this.querySelector('slot');
-    const children = slot ? slot.assignedNodes().filter(node => node.nodeType === Node.ELEMENT_NODE) : [];
+    const slot = shadowRoot.querySelector('slot');
+    const children = slot ? slot.assignedElements() : [];
     children.forEach(child => {
       select.appendChild(child);
     });
