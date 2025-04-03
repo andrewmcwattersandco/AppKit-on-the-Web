@@ -75,6 +75,15 @@ class NSPopUpButton extends HTMLElement {
     `;
 
     const select = shadowRoot.querySelector('select');
+    const attributes = ['autocomplete', 'disabled', 'form', 'multiple', 'name', 'required', 'size', 'selectedIndex', 'value'];
+
+    attributes.forEach(attr => {
+      if (this.hasAttribute(attr)) {
+        select.setAttribute(attr, this.getAttribute(attr));
+      }
+    });
+
+    // const select = shadowRoot.querySelector('select');
     const slot = shadowRoot.querySelector('slot');
     const children = slot ? slot.assignedElements() : [];
     children.forEach(child => {
