@@ -18,9 +18,9 @@ class NSPopUpButton extends HTMLElement {
     return this.getAttribute('autocomplete');
   }
 
-  set autocomplete(newValue) {
-    this.shadowRoot.querySelector('select').setAttribute('autocomplete', newValue);
-    this.setAttribute('autocomplete', newValue);
+  set autocomplete(value) {
+    this.shadowRoot.querySelector('select').setAttribute('autocomplete', value);
+    this.setAttribute('autocomplete', value);
   }
 
   get disabled() {
