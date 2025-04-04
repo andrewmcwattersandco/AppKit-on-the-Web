@@ -103,6 +103,10 @@ class NSPopUpButton extends HTMLElement {
         select.setAttribute(name, newValue);
       }
     }
+
+    if (name === 'value') {
+      this.#internals.setFormValue(this.value);
+    }
   }
 
   connectedCallback() {
@@ -177,7 +181,7 @@ class NSPopUpButton extends HTMLElement {
     const select = shadowRoot.querySelector('select');
     NSPopUpButton.observedAttributes.forEach(attr => {
       if (this.hasAttribute(attr)) {
-      select.setAttribute(attr, this.getAttribute(attr));
+        select.setAttribute(attr, this.getAttribute(attr));
       }
     });
 
@@ -186,6 +190,10 @@ class NSPopUpButton extends HTMLElement {
     const children = slot ? slot.assignedElements() : [];
     children.forEach(child => {
       select.appendChild(child);
+    });
+
+    select.addEventListener('change', (event) => {
+      this.#internals.setFormValue(event.target.value);
     });
   }
 }
