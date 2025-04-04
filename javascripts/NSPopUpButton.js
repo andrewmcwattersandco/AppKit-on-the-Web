@@ -1,7 +1,16 @@
 class NSPopUpButton extends HTMLElement {
+  // https://html.spec.whatwg.org/dev/custom-elements.html#custom-elements-face-example
+  // https://webkit.org/blog/13711/elementinternals-and-form-associated-custom-elements/
+  static formAssociated = true;
+  // https://html.spec.whatwg.org/multipage/form-elements.html#htmlselectelement
+  static observedAttributes = ['autocomplete', 'disabled', 'form', 'multiple', 'name', 'required', 'size', 'selectedIndex', 'value'];
+
+  #internals;
+
   constructor() {
     super();
     this.attachShadow({mode: 'open'});
+    this.#internals = this.attachInternals();
     this.render();
   }
 
@@ -75,11 +84,9 @@ class NSPopUpButton extends HTMLElement {
     `;
 
     const select = shadowRoot.querySelector('select');
-    const attributes = ['autocomplete', 'disabled', 'form', 'multiple', 'name', 'required', 'size', 'selectedIndex', 'value'];
-
-    attributes.forEach(attr => {
+    NSPopUpButton.observedAttributes.forEach(attr => {
       if (this.hasAttribute(attr)) {
-        select.setAttribute(attr, this.getAttribute(attr));
+      select.setAttribute(attr, this.getAttribute(attr));
       }
     });
 
