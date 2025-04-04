@@ -14,20 +14,6 @@ class NSPopUpButton extends HTMLElement {
     this.render();
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
-    const select = this.shadowRoot.querySelector('select');
-    if (NSPopUpButton.observedAttributes.includes(name)) {
-      if (newValue === null) {
-        select.removeAttribute(name);
-      } else {
-        select.setAttribute(name, newValue);
-      }
-    }
-  }
-
-  connectedCallback() {
-  }
-
   get autocomplete() {
     return this.getAttribute('autocomplete');
   }
@@ -106,6 +92,20 @@ class NSPopUpButton extends HTMLElement {
   set value(value) {
     this.shadowRoot.querySelector('select').value = value;
     this.#internals.setFormValue(value);
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    const select = this.shadowRoot.querySelector('select');
+    if (NSPopUpButton.observedAttributes.includes(name)) {
+      if (newValue === null) {
+        select.removeAttribute(name);
+      } else {
+        select.setAttribute(name, newValue);
+      }
+    }
+  }
+
+  connectedCallback() {
   }
 
   render() {
