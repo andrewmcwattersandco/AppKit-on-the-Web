@@ -28,6 +28,24 @@ class NSPopUpButton extends HTMLElement {
   connectedCallback() {
   }
 
+  get selectedIndex() {
+    return this.shadowRoot.querySelector('select').selectedIndex;
+  }
+
+  set selectedIndex(newIndex) {
+    this.shadowRoot.querySelector('select').selectedIndex = newIndex;
+    this.#internals.setFormValue(this.value);
+  }
+
+  get value() {
+    return this.shadowRoot.querySelector('select').value;
+  }
+
+  set value(newValue) {
+    this.shadowRoot.querySelector('select').value = newValue;
+    this.#internals.setFormValue(newValue);
+  }
+
   render() {
     const { shadowRoot } = this;
     shadowRoot.innerHTML = /* html */ `
