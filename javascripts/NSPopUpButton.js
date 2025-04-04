@@ -104,8 +104,13 @@ class NSPopUpButton extends HTMLElement {
       }
     }
 
+    if (name === 'selectedIndex') {
+      const select = this.shadowRoot.querySelector('select');
+      this.#internals.setFormValue(select.value, select.value);
+    }
+
     if (name === 'value') {
-      this.#internals.setFormValue(this.value);
+      this.#internals.setFormValue(this.value, this.value);
     }
   }
 
