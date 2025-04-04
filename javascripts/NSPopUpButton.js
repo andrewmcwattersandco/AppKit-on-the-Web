@@ -3,7 +3,7 @@ class NSPopUpButton extends HTMLElement {
   // https://webkit.org/blog/13711/elementinternals-and-form-associated-custom-elements/
   static formAssociated = true;
   // https://html.spec.whatwg.org/multipage/form-elements.html#htmlselectelement
-  static observedAttributes = ['autocomplete', 'disabled', 'form', 'multiple', 'name', 'required', 'size', 'selectedIndex', 'value'];
+  static observedAttributes = ['autocomplete', 'disabled', 'form', /* 'multiple', */ 'name', 'required', 'size', 'selectedIndex', 'value'];
 
   #internals;
 
@@ -50,22 +50,22 @@ class NSPopUpButton extends HTMLElement {
     return this.#internals.form;
   }
 
-  get multiple() {
-    return this.hasAttribute('multiple');
-  }
+  // get multiple() {
+  //   return this.hasAttribute('multiple');
+  // }
 
-  set multiple(flag) {
-    this.toggleAttribute('multiple', Boolean(flag));
-    this.shadowRoot.querySelector('select').toggleAttribute('multiple', Boolean(flag));
-  }
+  // set multiple(flag) {
+  //   this.shadowRoot.querySelector('select').toggleAttribute('multiple', Boolean(flag));
+  //   this.toggleAttribute('multiple', Boolean(flag));
+  // }
 
   get name() {
     return this.getAttribute('name');
   }
 
-  set name(newName) {
-    this.setAttribute('name', newName);
-    this.shadowRoot.querySelector('select').setAttribute('name', newName);
+  set name(value) {
+    this.shadowRoot.querySelector('select').setAttribute('name', value);
+    this.setAttribute('name', value);
   }
 
   get required() {
@@ -73,25 +73,29 @@ class NSPopUpButton extends HTMLElement {
   }
 
   set required(flag) {
-    this.toggleAttribute('required', Boolean(flag));
     this.shadowRoot.querySelector('select').toggleAttribute('required', Boolean(flag));
+    this.toggleAttribute('required', Boolean(flag));
   }
 
   get size() {
     return this.getAttribute('size');
   }
 
-  set size(newSize) {
-    this.setAttribute('size', newSize);
-    this.shadowRoot.querySelector('select').setAttribute('size', newSize);
+  set size(value) {
+    this.shadowRoot.querySelector('select').setAttribute('size', value);
+    this.setAttribute('size', value);
+  }
+
+  get type() {
+    return "select-one";
   }
 
   get selectedIndex() {
-    return this.shadowRoot.querySelector('select').selectedIndex;
+    return this.getAttribute('selectedIndex');
   }
 
-  set selectedIndex(newIndex) {
-    this.shadowRoot.querySelector('select').selectedIndex = newIndex;
+  set selectedIndex(value) {
+    this.shadowRoot.querySelector('select').selectedIndex = value;
     this.#internals.setFormValue(this.value);
   }
 
@@ -99,9 +103,9 @@ class NSPopUpButton extends HTMLElement {
     return this.shadowRoot.querySelector('select').value;
   }
 
-  set value(newValue) {
-    this.shadowRoot.querySelector('select').value = newValue;
-    this.#internals.setFormValue(newValue);
+  set value(value) {
+    this.shadowRoot.querySelector('select').value = value;
+    this.#internals.setFormValue(value);
   }
 
   render() {
