@@ -9,7 +9,7 @@ class NSPopUpButton extends HTMLElement {
 
   constructor() {
     super();
-    this.attachShadow({mode: 'open'});
+    this.attachShadow({mode: 'open', delegatesFocus: true});
     this.#internals = this.attachInternals();
     this.render();
   }
