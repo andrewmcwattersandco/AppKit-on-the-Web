@@ -28,6 +28,64 @@ class NSPopUpButton extends HTMLElement {
   connectedCallback() {
   }
 
+  get autocomplete() {
+    return this.getAttribute('autocomplete');
+  }
+
+  set autocomplete(newValue) {
+    this.shadowRoot.querySelector('select').setAttribute('autocomplete', newValue);
+    this.setAttribute('autocomplete', newValue);
+  }
+
+  get disabled() {
+    return this.hasAttribute('disabled');
+  }
+
+  set disabled(flag) {
+    this.shadowRoot.querySelector('select').toggleAttribute('disabled', Boolean(flag));
+    this.toggleAttribute('disabled', Boolean(flag));
+  }
+
+  get form() {
+    return this.#internals.form;
+  }
+
+  get multiple() {
+    return this.hasAttribute('multiple');
+  }
+
+  set multiple(flag) {
+    this.toggleAttribute('multiple', Boolean(flag));
+    this.shadowRoot.querySelector('select').toggleAttribute('multiple', Boolean(flag));
+  }
+
+  get name() {
+    return this.getAttribute('name');
+  }
+
+  set name(newName) {
+    this.setAttribute('name', newName);
+    this.shadowRoot.querySelector('select').setAttribute('name', newName);
+  }
+
+  get required() {
+    return this.hasAttribute('required');
+  }
+
+  set required(flag) {
+    this.toggleAttribute('required', Boolean(flag));
+    this.shadowRoot.querySelector('select').toggleAttribute('required', Boolean(flag));
+  }
+
+  get size() {
+    return this.getAttribute('size');
+  }
+
+  set size(newSize) {
+    this.setAttribute('size', newSize);
+    this.shadowRoot.querySelector('select').setAttribute('size', newSize);
+  }
+
   get selectedIndex() {
     return this.shadowRoot.querySelector('select').selectedIndex;
   }
