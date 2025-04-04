@@ -193,7 +193,7 @@ class NSPopUpButton extends HTMLElement {
     });
 
     select.addEventListener('change', (event) => {
-      this.#internals.setFormValue(event.target.value);
+      this.#internals.setFormValue(event.target.value, event.target.value);
     });
   }
 }
