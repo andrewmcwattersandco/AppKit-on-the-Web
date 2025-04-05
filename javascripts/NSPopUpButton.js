@@ -61,6 +61,7 @@ class NSPopUpButton extends HTMLElement {
   set required(flag) {
     this.shadowRoot.querySelector('select').toggleAttribute('required', Boolean(flag));
     this.toggleAttribute('required', Boolean(flag));
+    this.#updateValidity();
   }
 
   get size() {
@@ -92,6 +93,7 @@ class NSPopUpButton extends HTMLElement {
   set value(value) {
     this.shadowRoot.querySelector('select').value = value;
     this.#internals.setFormValue(value);
+    this.#updateValidity();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -111,6 +113,23 @@ class NSPopUpButton extends HTMLElement {
   }
 
   connectedCallback() {
+    this.#updateValidity();
+  }
+
+  #updateValidity() {
+    if (this.required && !this.value) {
+      this.#internals.setValidity({valueMissing: true}, 'Fill out this field', this.shadowRoot.querySelector('select'));
+    } else {
+      this.#internals.setValidity({});
+    }
+  }
+
+  checkValidity() {
+    return this.#internals.checkValidity();
+    }
+
+  reportValidity() {
+    return this.#internals.reportValidity();
   }
 
   render() {
@@ -195,6 +214,7 @@ class NSPopUpButton extends HTMLElement {
 
     select.addEventListener('change', (event) => {
       this.#internals.setFormValue(event.target.value, event.target.value);
+      this.#updateValidity();
     });
   }
 }
