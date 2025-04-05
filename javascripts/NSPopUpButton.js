@@ -116,6 +116,13 @@ class NSPopUpButton extends HTMLElement {
     this.#updateValidity();
   }
 
+  #updateWidth() {
+    // TODO: Update the width of the select element to shrink to fit the
+    // content.
+    const select = this.shadowRoot.querySelector('select');
+    // ...
+  }
+
   #updateValidity() {
     if (this.required && !this.value) {
       this.#internals.setValidity({valueMissing: true}, 'Fill out this field', this.shadowRoot.querySelector('select'));
@@ -214,8 +221,11 @@ class NSPopUpButton extends HTMLElement {
 
     select.addEventListener('change', (event) => {
       this.#internals.setFormValue(event.target.value, event.target.value);
+      this.#updateWidth();
       this.#updateValidity();
     });
+
+    this.#updateWidth();
   }
 }
 
