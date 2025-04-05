@@ -12,7 +12,9 @@
       line-height: 16px;
 
   /* base */
-  background: #FFFFFF;
+  --background-color: #FFFFFF;
+  /* background: #FFFFFF; */
+  background: var(--background-color);
   border: 0.5px solid rgba(0,0,0,0.02);
   box-shadow: 0 0.25px 0.25px 0 rgba(0,0,0,0.15), 0 1px 0.75px 0 rgba(0,0,0,0.05);
   border-radius: 5px;
@@ -21,7 +23,7 @@
 .appkit-button:active {
   /* base */
   /* background: #F0F0F0; */
-  filter: brightness(0.95);
+  background: hsl(from var(--background-color) h s calc(l - 6%));
 }
 
 .appkit-button.primary {
@@ -32,12 +34,19 @@
   /* Gradient */
   /* opacity: 0.17; */
   /* background: linear-gradient(180deg, #FFFFFF 0%, rgba(255,255,255,0.00) 96%), #007AFF; */
+  --background-color: #007aff;
+  /* background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.17) 0%,
+      rgba(255, 255, 255, 0) 96%
+    ),
+    #007aff; */
   background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.17) 0%,
       rgba(255, 255, 255, 0) 96%
     ),
-    #007aff;
+    var(--background-color);
 
   /* Tint Color */
     /* color: #007AFF; */
