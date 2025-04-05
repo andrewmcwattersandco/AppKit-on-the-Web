@@ -20,7 +20,8 @@
 
 .appkit-button:active {
   /* base */
-  background: #F0F0F0;
+  /* background: #F0F0F0; */
+  filter: brightness(0.95);
 }
 
 .appkit-button.primary {
