@@ -117,8 +117,7 @@ class NSPopUpButton extends HTMLElement {
   }
 
   #updateWidth() {
-    // TODO: Update the width of the select element to shrink to fit the
-    // content.
+    // Update the width of the select element to shrink to fit the content.
     // Create a span to measure the width of the text.
     const select = this.shadowRoot.querySelector('select');
     const span = document.createElement('span');
