@@ -122,6 +122,9 @@ class NSPopUpButton extends HTMLElement {
     // Create a span to measure the width of the text.
     const select = this.shadowRoot.querySelector('select');
     const span = document.createElement('span');
+    span.style.position = 'absolute';
+    span.style.visibility = 'hidden';
+    span.style.whiteSpace = 'nowrap';
     span.style.font = getComputedStyle(select).font;
     span.textContent = select.options[select.selectedIndex].text;
     document.body.appendChild(span);
