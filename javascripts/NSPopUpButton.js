@@ -171,7 +171,7 @@ class NSPopUpButton extends HTMLElement {
           padding-top: 2px;
           padding-left: 11px;
           padding-bottom: 2px;
-          padding-right: calc(16px - 5px);
+          padding-right: calc(16px + 2px);
         }
 
         .appkit-pop-up-button select:hover {
