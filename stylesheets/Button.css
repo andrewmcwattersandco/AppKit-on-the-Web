@@ -62,7 +62,7 @@
 
 .appkit-button.primary:active {
   /* Gradient */
-  --background-color: hsl(from #007aff h s calc(l - 6%));
+  --background-color: hsl(from #007aff h s calc(l - 6));
 }
 
 .appkit-button.secondary {
