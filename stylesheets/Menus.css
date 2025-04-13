@@ -20,6 +20,10 @@
     /* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15), 0 8px 15px 6px rgba(0,0,0,0.18); */
     box-shadow: 0 0 0.5px rgba(0,0,0,0.90), inset 0 0 0.5px 0 rgba(255,255,255,0.50), 0 1px 2px 0 rgba(0,0,0,0.09), 0 4px 7.5px 3px rgba(0,0,0,0.13);
     border-radius: 8px;
+
+  /* 6.1. Controlling content selection */
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
 }
 
 .appkit-menu-item {
@@ -35,4 +39,7 @@
   font-size: 13px;
   color: rgba(0,0,0,0.85);
   line-height: 16px;
+
+  /* 5.1. Pointer interaction */
+  cursor: default;
 }
