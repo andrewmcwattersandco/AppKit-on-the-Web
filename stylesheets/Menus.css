@@ -70,3 +70,16 @@
   border: none;
   border-radius: 0.5px;
 }
+
+.appkit-menu .appkit-text-field {
+  /* Field Shape */
+  padding: 2px 9.5px;
+
+  /* base */
+  background: rgba(0,0,0,0.06);
+
+  margin-bottom: 5px;
+  width: 100%;
+  font-size: 13px;
+  outline: none;
+}
