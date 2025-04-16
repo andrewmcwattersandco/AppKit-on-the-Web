@@ -21,6 +21,13 @@
     border-width: 0 1px;
 }
 
+.appkit-form-list-row .left-accessory {
+  flex-grow: 1;
+}
+
+.appkit-form-list-row .right-accessory {
+}
+
 .appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
   display: block;
   position: relative;
