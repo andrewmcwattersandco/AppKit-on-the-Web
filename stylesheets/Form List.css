@@ -103,7 +103,8 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   line-height: 14px;
 }
 
-.appkit-form-list-row input[type="number"] {
+.appkit-form-list-row input[type="number"],
+.appkit-form-list-row input[type="text"] {
   /* Stepper */
     /* Label */
     /* font-family: SFPro-Regular; */
