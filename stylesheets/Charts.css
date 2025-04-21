@@ -10,3 +10,7 @@
   fill: rgba(0, 0, 0, 0.50);
   text-anchor: start;
 }
+
+.appkit-chart .marks {
+  fill: rgba(0, 122, 255, 1);
+}
