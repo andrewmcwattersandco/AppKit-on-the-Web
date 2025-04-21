@@ -7,12 +7,17 @@
     <title>AppKit on the Web</title>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        const base          = document.createElement('base');
-        const isLocalhost   = location.hostname === 'localhost';
-        const isPrivateIPv4 = /^(10\.\d{1,3}\.\d{1,3}\.\d{1,3}|192\.168\.\d{1,3}\.\d{1,3}|172\.(1[6-9]|2[0-9]|3[0-1])\.\d{1,3}\.\d{1,3})$/.test(location.hostname);
-        const isPrivateIPv6 = /^((fc00|fd00)::|fe80::)/.test(location.hostname);
-              base.href     = isLocalhost || isPrivateIPv4 || isPrivateIPv6 ? './' : '/AppKit-on-the-Web/';
-        document.head.appendChild(base);
+        const hostname      = location.hostname;
+        const isLocalhost   = hostname === 'localhost';
+        const isLoopback    = hostname === '127.0.0.1' || hostname === '::1';
+        const isPrivateIPv4 = /^(10(?:\.\d{1,3}){3}|192\.168(?:\.\d{1,3}){2}|172(?:\.1[6-9]|2[0-9]|3[0-1])(?:\.\d{1,3}){2})$/.test(hostname);
+        const isPrivateIPv6 = /^(fc00|fd[0-9a-f]{2}|fe80):[0-9a-f:]+$/i.test(hostname);
+
+        if (!document.querySelector('base')) {
+          const base = document.createElement('base');
+          base.href  = (isLocalhost || isLoopback || isPrivateIPv4 || isPrivateIPv6) ? './' : '/AppKit-on-the-Web/';
+          document.head.prepend(base);
+        }
       });
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
