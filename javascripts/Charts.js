@@ -1,6 +1,11 @@
 class Chart {
   constructor(element, data) {
     this.element = element;
-    this.data = data;
+    this.data    = data;
+
+    this.init();
+  }
+
+  init() {
   }
 }
