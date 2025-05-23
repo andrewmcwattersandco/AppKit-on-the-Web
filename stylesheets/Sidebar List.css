@@ -46,6 +46,7 @@
   margin-inline-end: 6px;
 
   /* Tint */
+  color: #0070F5;
     /* Symbol */
     /* font-family: SFPro-Regular; */
     font-family: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont,
@@ -53,7 +54,7 @@
       sans-serif;
     font-weight: normal;
     font-size: 13px;
-    color: #000000;
+    /* color: #000000; */
     text-align: center;
 }
 
