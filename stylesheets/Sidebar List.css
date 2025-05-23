@@ -79,3 +79,12 @@
 .appkit-sidebar-list-item .icon + .label {
   margin-inline-start: 0px;
 }
+
+.appkit-sidebar-list-item.selected {
+  /* Platter */
+    /* Focus Selection */
+    background: linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
+                linear-gradient(rgba(246,246,246,0.84), rgba(246,246,246,0.84));
+    border-radius: 5px;
+    backdrop-filter: blur(30px) saturate(200%);
+}
