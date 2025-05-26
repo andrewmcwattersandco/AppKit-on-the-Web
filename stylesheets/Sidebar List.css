@@ -89,7 +89,8 @@
     backdrop-filter: blur(30px) saturate(200%);
 }
 
-.appkit-sidebar-list-item.disabled {
+.appkit-sidebar-list-item.disabled,
+.appkit-sidebar-list-item.disabled * {
   color: #BFBFBF;
   pointer-events: none;
 }
