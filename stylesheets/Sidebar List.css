@@ -81,7 +81,8 @@
   line-height: 16px;
 }
 
-.appkit-sidebar-list-item .icon + .label {
+.appkit-sidebar-list-item .icon + .label,
+.appkit-sidebar-list-item input[type="checkbox"] + .label {
   margin-inline-start: 0px;
 }
 
