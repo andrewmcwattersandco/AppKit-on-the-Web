@@ -29,6 +29,8 @@
 .appkit-sidebar-list-item {
   margin-inline-start: 10px;
   margin-inline-end: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .appkit-sidebar-list-item .left-accessory {
@@ -70,6 +72,10 @@
   /* margin-inline-end: 6px; */
   margin-inline-start: 9px;
   margin-inline-end: 9px;
+  height: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   /* Label */
   /* font-family: SFPro-Regular; */
