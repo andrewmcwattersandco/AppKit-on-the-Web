@@ -73,9 +73,9 @@
   background: rgba(0,0,0,0.10);
 }
 
-.appkit-segmented-control label:last-child::after,
-.appkit-segmented-control label:has(input:checked)::after,
-.appkit-segmented-control label:has(+ label:has(input:checked))::after,
-.appkit-segmented-control label:active::after {
+   .appkit-segmented-control label:last-child::after,
+   .appkit-segmented-control label:has(input:checked)::after,
+/* .appkit-segmented-control label:has(+ label:has(input:checked))::after, */
+   .appkit-segmented-control label:active::after {
   display: none;
 }
