@@ -38,7 +38,8 @@
 .appkit-sidebar-list-item .right-accessory {
 }
 
-.appkit-sidebar-list-item .icon {
+.appkit-sidebar-list-item .icon,
+.appkit-sidebar-list-item input[type="checkbox"] {
   display: inline-block;
   margin-block-start: 4px;
   margin-block-end: 4px;
