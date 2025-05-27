@@ -59,7 +59,8 @@
 /* Separator */
 .appkit-segmented-control label::after {
   margin: 4px 0;
-  display: inline-block;
+  /* display: inline-block; */
+  display: none;
   position: absolute;
   top: 0;
   right: -2px;
