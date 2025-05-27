@@ -42,6 +42,8 @@
   display: inline-block;
   margin-block-start: 4px;
   margin-block-end: 4px;
+  /* margin-inline-start: 6px; */
+  /* margin-inline-end: 6px; */
   margin-inline-start: 9px;
   margin-inline-end: 9px;
 
@@ -62,6 +64,8 @@
   display: inline-block;
   margin-block-start: 6px;
   margin-block-end: 6px;
+  /* margin-inline-start: 6px; */
+  /* margin-inline-end: 6px; */
   margin-inline-start: 9px;
   margin-inline-end: 9px;
 
