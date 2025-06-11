@@ -44,7 +44,7 @@
 .appkit-form-list-row-spacing + .appkit-form-list-row {
   /* Group */
     /* Background Style */
-    border-radius: 6px 6px 0 0;
+    border-radius: 12px 12px 0 0;
 
     /* Mask */
     border-top-width: 1px;
@@ -54,7 +54,7 @@
 .appkit-form-list-row:has(+ .appkit-form-list-row-spacing) {
   /* Group */
     /* Background Style */
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 12px 12px;
 
     /* Mask */
     border-bottom-width: 1px;
@@ -66,7 +66,7 @@
 .appkit-form-list-row:only-child {
   /* Group */
     /* Background Style */
-    border-radius: 6px;
+    border-radius: 12px;
 }
 
 .appkit-form-list-row-spacing {
