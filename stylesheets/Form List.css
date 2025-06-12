@@ -157,7 +157,7 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   padding-top: 2px;
   padding-left: 11px;
   padding-bottom: 2px;
-  padding-right: calc(16px - 5px);
+  padding-right: calc(24px - 4px);
 }
 
 .appkit-pop-up-button select:hover {
@@ -176,14 +176,18 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
 }
 
 .appkit-pop-up-button .indicator {
-  margin-left: calc(-2px + -16px);
+  margin-left: -24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 
   /* Mask */
-  width: 16px;
-  height: 16px;
-  background: rgba(0,0,0,0.02);
-  border-radius: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 100px;
+  background: rgba(0,0,0,0.05);
+  overflow: hidden;
 }
 
 .appkit-pop-up-button:hover .indicator {
