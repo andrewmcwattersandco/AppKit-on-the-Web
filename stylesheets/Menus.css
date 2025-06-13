@@ -51,7 +51,7 @@
 
 .appkit-menu-item-header {
   /* Padding */
-  padding: 4px 10px;
+  padding: 5px 16px;
 
   /* Label */
   /* font-family: SFPro-Semibold; */
@@ -70,7 +70,7 @@
 
 .appkit-menu hr {
   /* Rectangle */
-  margin: 4px 10px;
+  margin: 5px 16px;
   height: 1px;
   background: rgba(0,0,0,0.10);
   border: none;
@@ -79,6 +79,7 @@
 
 .appkit-menu .appkit-text-field {
   /* Field Shape */
+  margin: 0 5px;
   padding: 2px 9.5px;
 
   /* base */
