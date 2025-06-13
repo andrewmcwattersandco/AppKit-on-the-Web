@@ -165,21 +165,19 @@ class NSPopUpButton extends HTMLElement {
 
           /* Rectangle */
           background-color: transparent;
-          border: 0.5px solid transparent;
-          border-radius: 5px;
-          padding-top: 2px;
-          padding-left: 11px;
-          padding-bottom: 2px;
-          padding-right: calc(24px + 4px);
+          border-width: 0;
+          border-radius: 6px;
+          padding-top: 4px;
+          padding-left: 9.5px;
+          padding-bottom: 4px;
+          padding-right: calc(24px - 4px);
+          overflow: hidden;
         }
 
         .appkit-pop-up-button select:hover {
           /* .appkit-button */
           /* base */
-          background: #FFFFFF;
-          border: 0.5px solid rgba(0,0,0,0.02);
-          box-shadow: 0 0.25px 0.25px 0 rgba(0,0,0,0.15), 0 1px 0.75px 0 rgba(0,0,0,0.05);
-          border-radius: 5px;
+          background: rgba(0,0,0,0.05);
         }
 
         .appkit-pop-up-button {
