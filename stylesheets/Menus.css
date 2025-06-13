@@ -86,7 +86,7 @@
   background: rgba(0,0,0,0.06);
 
   margin-bottom: 5px;
-  width: 100%;
+  width: calc(100% - 2 * 5px);
   font-size: 13px;
   outline: none;
 }
