@@ -52,7 +52,17 @@
 
 .appkit-menu-item .item {
   /* Item */
-  padding: 0 12px;
+  margin: 0 12px;
+}
+
+.appkit-menu-item .symbol {
+  /* Symbol */
+  margin: 0 4px;
+}
+
+.appkit-menu-item .symbol + .item {
+  /* Item */
+  margin-left: 6px;
 }
 
 .appkit-menu-item-header {
