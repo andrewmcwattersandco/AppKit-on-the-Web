@@ -174,7 +174,8 @@ class NSPopUpButton extends HTMLElement {
           overflow: hidden;
         }
 
-        .appkit-pop-up-button select:hover {
+        .appkit-pop-up-button select:hover,
+        .appkit-pop-up-button select.active {
           /* .appkit-button */
           /* base */
           background: rgba(0,0,0,0.05);
