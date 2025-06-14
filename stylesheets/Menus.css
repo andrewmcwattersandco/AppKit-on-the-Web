@@ -52,6 +52,18 @@
   cursor: default;
 }
 
+.appkit-menu-item:hover::after {
+  /* BG */
+  border-radius: 8px;
+  flex: none;
+  position: absolute;
+  left: -11px;
+  right: -11px;
+  top: 0;
+  bottom: 0;
+  background: #0069F9;
+}
+
 .appkit-menu-item .item {
   /* Item */
   margin: 0 12px;
