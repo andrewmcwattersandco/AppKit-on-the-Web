@@ -97,6 +97,7 @@
 
 .appkit-menu-item .item + span {
   margin-right: 18px;
+  margin-left: 25px;
 }
 
 .appkit-menu-item-header {
