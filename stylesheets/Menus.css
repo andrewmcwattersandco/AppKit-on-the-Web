@@ -54,6 +54,8 @@
 
 .appkit-menu-item:hover::after {
   /* BG */
+  display: block;
+  content: "";
   border-radius: 8px;
   flex: none;
   position: absolute;
