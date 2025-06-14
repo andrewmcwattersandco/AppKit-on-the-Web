@@ -57,6 +57,10 @@
   color: #FFFFFF;
 }
 
+.appkit-menu-item:hover svg g {
+  fill: #FFFFFF;
+}
+
 .appkit-menu-item:hover::after {
   /* BG */
   margin: 0 5px;
