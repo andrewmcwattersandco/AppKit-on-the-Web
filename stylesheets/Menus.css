@@ -56,15 +56,16 @@
 .appkit-menu-item:hover::after {
   /* BG */
   margin: 0 5px;
-  width: calc(100% - 2 * 5px);
   display: block;
-  content: "";
-  border-radius: 8px;
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
+  z-index: -1;
+  width: calc(100% - 2 * 5px);
+  height: 100%;
+  content: "";
   background: #0069F9;
+  border-radius: 8px;
 }
 
 .appkit-menu-item .item {
