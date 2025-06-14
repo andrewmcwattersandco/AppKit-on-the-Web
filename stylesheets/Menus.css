@@ -55,6 +55,7 @@
 .appkit-menu-item .item {
   /* Item */
   margin: 0 12px;
+  flex-grow: 1;
 }
 
 .appkit-menu-item .symbol {
@@ -62,7 +63,6 @@
   margin: 0 2px 0 7px;
   display: inline-block;
   min-width: 11px;
-  flex-grow: 1;
 }
 
 .appkit-menu-item .symbol + .item {
