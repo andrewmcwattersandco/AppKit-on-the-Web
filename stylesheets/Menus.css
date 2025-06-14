@@ -53,6 +53,10 @@
   cursor: default;
 }
 
+.appkit-menu-item:hover {
+  color: #FFFFFF;
+}
+
 .appkit-menu-item:hover::after {
   /* BG */
   margin: 0 5px;
