@@ -95,6 +95,11 @@
   margin-left: 0;
 }
 
+.appkit-menu-item .item:has( + span) {
+  /* Icon */
+  margin-right: 0;
+}
+
 .appkit-menu-item .item + span {
   margin-right: 18px;
   margin-left: 25px;
