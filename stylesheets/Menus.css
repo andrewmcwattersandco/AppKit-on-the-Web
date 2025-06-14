@@ -70,6 +70,10 @@
   margin-left: 0;
 }
 
+.appkit-menu-item .item + span {
+  margin-right: 18px;
+}
+
 .appkit-menu-item-header {
   /* Padding */
   padding: 5px 16px;
