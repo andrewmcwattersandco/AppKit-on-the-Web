@@ -34,6 +34,8 @@
   /* Padding */
   padding: 5px 4px;
 
+  display: flex;
+
   /* Label */
   /* font-family: SFPro-Medium; */
   font-family: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont,
@@ -60,6 +62,7 @@
   margin: 0 2px 0 7px;
   display: inline-block;
   min-width: 11px;
+  flex-grow: 1;
 }
 
 .appkit-menu-item .symbol + .item {
