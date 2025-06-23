@@ -54,6 +54,10 @@
     background: rgba(0,0,0,0.099);
 }
 
+.appkit-table thead tr th:last-child::after {
+  display: none;
+}
+
 .appkit-table tbody tr td {
   padding: 2px 5px;
 
