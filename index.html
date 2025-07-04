@@ -24,10 +24,25 @@
     <link rel="stylesheet" href="./stylesheets/AppKit.css">
   </head>
   <body style="margin: 0; height: 100vh; display: flex; justify-content: center; align-items: center;">
-    <fieldset class="appkit-segmented-control" style="width: 291px;">
-      <label><input type="radio" name="dog-type" value="pupper" required disabled>Label</label><label
-            ><input type="radio" name="dog-type" value="doggo">Label</label><label
-            ><input type="radio" name="dog-type" value="doge">Label</label>
-    </fieldset>
+    <div class="appkit-backdrop" style="z-index: -1;"></div>
+    <div class="appkit-sheet" style="width: 672px; height: 425px;">
+      <div class="sidebar">
+      </div>
+      <div class="content-area">
+        <div class="toolbar">
+          <div class="button-group" style="margin-left: auto;">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+          </div>
+        </div>
+        <div class="scroll-view">
+        </div>
+        <div class="confirmation-buttons" style="text-align: right;">
+          <button class="appkit-button" style="margin-right: 8px;">Cancel</button>
+          <button class="appkit-button primary">Save</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
