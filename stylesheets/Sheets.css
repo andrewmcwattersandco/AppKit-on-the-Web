@@ -84,7 +84,8 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   overflow: hidden;
 }
 
-.appkit-sheet .toolbar .button-group {
+.appkit-sheet .toolbar .button-group,
+.appkit-button-group {
   border-radius: 100px;
   display: flex;
   flex-direction: row;
@@ -98,7 +99,8 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   overflow: hidden;
 }
 
-.appkit-sheet .toolbar .button-group button {
+.appkit-sheet .toolbar .button-group button,
+.appkit-button-group button {
   padding: 4px;
   border: none;
   position: relative;
@@ -117,7 +119,8 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   border-radius: 100px;
 }
 
-.appkit-sheet .toolbar .button-group button::after {
+.appkit-sheet .toolbar .button-group button::after,
+.appkit-button-group button::after {
   position: absolute;
   top: 4px;
   left: 4px;
@@ -127,11 +130,13 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   border-radius: 100px;
 }
 
-.appkit-sheet .toolbar .button-group button:hover::after {
+.appkit-sheet .toolbar .button-group button:hover::after,
+.appkit-button-group button:hover::after {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.appkit-sheet .toolbar .button-group button:active::after {
+.appkit-sheet .toolbar .button-group button:active::after,
+.appkit-button-group button:active::after {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
