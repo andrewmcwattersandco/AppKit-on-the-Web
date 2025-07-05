@@ -132,6 +132,14 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   border-radius: 100px;
 }
 
+.appkit-sheet .toolbar .button-group button:only-child::after,
+.appkit-button-group button:only-child::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .appkit-sheet .toolbar .button-group button:hover::after,
 .appkit-button-group button:hover::after {
   background-color: rgba(0, 0, 0, 0.05);
