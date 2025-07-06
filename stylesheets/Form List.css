@@ -110,8 +110,9 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   line-height: 14px;
 }
 
-.appkit-form-list-row input[type="number"],
-.appkit-form-list-row input[type="text"] {
+.appkit-form-list-row input[type="text"],
+.appkit-form-list-row input[type="password"],
+.appkit-form-list-row input[type="number"] {
   /* Stepper */
     /* Label */
     /* font-family: SFPro-Regular; */
@@ -131,6 +132,11 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
       padding-bottom: 3px;
       background-color: transparent;
       outline-style: none;
+}
+
+.appkit-form-list-row input[type="password"] {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
 }
 
 .appkit-form-list-row input[type="number"]::-webkit-inner-spin-button {
