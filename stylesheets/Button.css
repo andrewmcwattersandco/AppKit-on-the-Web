@@ -12,7 +12,7 @@
       line-height: 16px;
 
   /* base */
-  --background-color: #FFFFFF;
+  --background-color: rgba(0,0,0,0.05);
   /* background: #FFFFFF; */
   background: var(--background-color);
   border-width: 0;
