@@ -1,3 +1,8 @@
+/* BUG: This selector is to fix a rendering issue in Chromium. */
+div:has(> .appkit-table) {
+  backdrop-filter: blur(0px);
+}
+
 .appkit-table {
   border-collapse: collapse;
 }
