@@ -1,7 +1,19 @@
-.appkit-form-list-row {
-  /* Padding */
+.appkit-form-list {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
   padding: 10px;
+  flex: none;
+  align-self: stretch;
+  background: rgba(0,0,0,0.01);
+  box-shadow: inset 0 0 1px 0.5px rgba(0,0,0,0.02), inset 0 1px 4px 0 rgba(0,0,0,0.01);
+  overflow: hidden;
+}
 
+.appkit-form-list-row {
   /* 3.4. Text-based Markers: the list-style-type property */
   list-style-type: none;
 
@@ -12,13 +24,12 @@
   color: rgba(0,0,0,0.85);
   line-height: 16px;
 
-  /* Group */
-    /* Background Style */
-    background: rgba(0,0,0,0.01);
-    border: 1px solid rgba(0,0,0,0.04);
-
-    /* Mask */
-    border-width: 0 1px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: start; */
+  justify-content: space-between;
+  flex: none;
+  align-self: stretch;
 }
 
 .appkit-form-list-row .left-accessory {
@@ -29,9 +40,9 @@
 }
 
 .appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
+  margin-top: 10px;
   display: block;
   position: relative;
-  bottom: -10px;
   height: 1px;
   content: "";
 
@@ -219,10 +230,18 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
 }
 
 .appkit-form-list-row.footer {
+  margin: -10px;
+  margin-top: 0;
   padding: 0;
   padding-bottom: 0;
-  border-top-width: 1px;
+  border-top: 1px solid rgba(0,0,0,0.05);
   background: rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  flex: none;
+  align-self: stretch;
 }
 
 .appkit-form-list-row.footer button.add,
