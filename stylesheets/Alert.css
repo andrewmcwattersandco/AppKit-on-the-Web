@@ -4,6 +4,10 @@
   user-select: none;
 }
 
+::backdrop {
+  overflow-y: scroll;
+}
+
 .appkit-backdrop {
   /* Background */
   background: rgba(0, 0, 0, 0.2);
