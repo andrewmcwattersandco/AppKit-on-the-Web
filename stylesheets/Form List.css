@@ -59,15 +59,15 @@
   border-radius: 0.5px;
 }
 
-.appkit-form-list-row:first-child,
-.appkit-form-list-row-spacing + .appkit-form-list-row {
+/* .appkit-form-list-row:first-child, */
+/* .appkit-form-list-row-spacing + .appkit-form-list-row { */
   /* Group */
     /* Background Style */
-    border-radius: 12px 12px 0 0;
+    /* border-radius: 12px 12px 0 0; */
 
     /* Mask */
-    border-top-width: 1px;
-}
+    /* border-top-width: 1px; */
+/* } */
 
 /* .appkit-form-list-row:last-child, */
 /* .appkit-form-list-row:has(+ .appkit-form-list-row-spacing) { */
