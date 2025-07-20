@@ -48,10 +48,11 @@
 }
 
 .appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
   display: block;
   position: relative;
+  bottom: -10px;
   height: 1px;
   width: 100%;
   content: "";
