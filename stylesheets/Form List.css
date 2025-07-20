@@ -69,15 +69,15 @@
     border-top-width: 1px;
 }
 
-.appkit-form-list-row:last-child,
-.appkit-form-list-row:has(+ .appkit-form-list-row-spacing) {
+/* .appkit-form-list-row:last-child, */
+/* .appkit-form-list-row:has(+ .appkit-form-list-row-spacing) { */
   /* Group */
     /* Background Style */
-    border-radius: 0 0 12px 12px;
+    /* border-radius: 0 0 12px 12px; */
 
     /* Mask */
-    border-bottom-width: 1px;
-}
+    /* border-bottom-width: 1px; */
+/* } */
 
 .appkit-form-list-row:first-child:has(+ .appkit-form-list-row-spacing),
 .appkit-form-list-row-spacing + .appkit-form-list-row:last-child,
