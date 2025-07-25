@@ -15,7 +15,8 @@
 }
 
 .appkit-form-list-row {
-  padding: 10px;
+  --padding: 10px;
+  padding: var(--padding);
   border-width: 0;
   /* 3.4. Text-based Markers: the list-style-type property */
   list-style-type: none;
@@ -52,7 +53,8 @@
   /* margin-bottom: 10px; */
   display: block;
   position: relative;
-  bottom: -10px;
+  /* bottom: -10px; */
+  bottom: calc(-1 * var(--padding));
   height: 1px;
   width: 100%;
   content: "";
