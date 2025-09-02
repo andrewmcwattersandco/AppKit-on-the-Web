@@ -41,11 +41,13 @@
   align-self: stretch;
 }
 
-.appkit-form-list-row .left-accessory {
+.appkit-form-list-row .left-accessory,
+.appkit-form-list-row .leading {
   flex-grow: 1;
 }
 
-.appkit-form-list-row .right-accessory {
+.appkit-form-list-row .right-accessory,
+.appkit-form-list-row .trailing {
 }
 
 .appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
