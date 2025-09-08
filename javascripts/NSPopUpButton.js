@@ -142,7 +142,7 @@ class NSPopUpButton extends HTMLElement {
 
   checkValidity() {
     return this.#internals.checkValidity();
-    }
+  }
 
   reportValidity() {
     return this.#internals.reportValidity();
