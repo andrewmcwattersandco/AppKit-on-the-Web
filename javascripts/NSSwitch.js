@@ -169,7 +169,7 @@ class NSSwitch extends HTMLElement {
     `;
 
     const select = shadowRoot.querySelector('select');
-    NSPopUpButton.observedAttributes.forEach(attr => {
+    NSSwitch.observedAttributes.forEach(attr => {
       if (this.hasAttribute(attr)) {
         select.setAttribute(attr, this.getAttribute(attr));
       }
