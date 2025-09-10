@@ -138,7 +138,6 @@ class NSSwitch extends HTMLElement {
         <div class="knob">
         </div>
       </div>
-      <slot></slot>
     `;
 
     const input = shadowRoot.querySelector('input[type="checkbox"]');
