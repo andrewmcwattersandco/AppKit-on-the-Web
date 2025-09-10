@@ -127,7 +127,7 @@ class NSPopUpButton extends HTMLElement {
     span.style.font = getComputedStyle(select).font;
     span.textContent = select.options[select.selectedIndex].text;
     document.body.appendChild(span);
-    const width = 9.5 + span.offsetWidth + 12 + 18 + 7; // 9.5px padding-left + span + 12px padding-right + 18px indicator + 7px margin-right
+    const width = 12 + span.offsetWidth + 12 + 18 + 7; // 12px padding-left + span + 12px padding-right + 18px indicator + 7px margin-right
     document.body.removeChild(span);
     select.style.width = `${width}px`;
   }
@@ -169,7 +169,7 @@ class NSPopUpButton extends HTMLElement {
           border-width: 0;
           border-radius: 6px;
           padding-top: 4px;
-          padding-left: 9.5px;
+          padding-left: 12px;
           padding-bottom: 4px;
           padding-right: calc(18px + 7px);
           overflow: hidden;
