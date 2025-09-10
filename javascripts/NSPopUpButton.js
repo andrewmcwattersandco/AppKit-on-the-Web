@@ -127,7 +127,7 @@ class NSPopUpButton extends HTMLElement {
     span.style.font = getComputedStyle(select).font;
     span.textContent = select.options[select.selectedIndex].text;
     document.body.appendChild(span);
-    const width = span.offsetWidth + 11 + 3 + 24 + 2; // 11px padding + 3px padding + 24px indicator + 4px padding
+    const width = 9.5 + span.offsetWidth + 12 + 18 + 7; // 9.5px padding-left + span + 12px padding-right + 18px indicator + 7px margin-right
     document.body.removeChild(span);
     select.style.width = `${width}px`;
   }
@@ -171,7 +171,7 @@ class NSPopUpButton extends HTMLElement {
           padding-top: 4px;
           padding-left: 9.5px;
           padding-bottom: 4px;
-          padding-right: calc(24px - 4px);
+          padding-right: calc(18px + 7px);
           overflow: hidden;
         }
 
@@ -189,15 +189,16 @@ class NSPopUpButton extends HTMLElement {
         }
 
         .appkit-pop-up-button .indicator {
-          margin-left: -24px;
+          margin-left: calc(-18px - 7px);
+          margin-right: 7px;
           display: flex;
           align-items: center;
           justify-content: center;
           pointer-events: none;
 
           /* Mask */
-          width: 24px;
-          height: 24px;
+          width: 18px;
+          height: 18px;
           border-radius: 100px;
           background: rgba(0,0,0,0.05);
           overflow: hidden;
