@@ -96,34 +96,14 @@ class NSSwitch extends HTMLElement {
     const { shadowRoot } = this;
     shadowRoot.innerHTML = /* html */ `
       <style>
-        .appkit-switch select {
+        .appkit-switch input {
           appearance: none;
 
-          /* Label */
-          /* font-family: SFPro-Regular; */
-          font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-            Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-          font-size: 13px;
-          letter-spacing: -0.2px;
-          color: rgba(0,0,0,0.85);
-          line-height: 16px;
-
-          /* Rectangle */
-          background-color: transparent;
-          border-width: 0;
-          border-radius: 6px;
-          padding-top: 4px;
-          padding-left: 12px;
-          padding-bottom: 4px;
-          padding-right: calc(18px + 7px);
+          width: 36px;
+          height: 16px;
+          border-radius: 100px;
+          background: rgba(0,136,255,1);
           overflow: hidden;
-        }
-
-        .appkit-switch select:hover,
-        .appkit-switch.active select {
-          /* .appkit-button */
-          /* base */
-          background: rgba(0,0,0,0.05);
         }
 
         .appkit-switch {
