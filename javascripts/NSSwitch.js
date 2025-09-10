@@ -96,7 +96,7 @@ class NSSwitch extends HTMLElement {
     const { shadowRoot } = this;
     shadowRoot.innerHTML = /* html */ `
       <style>
-        .appkit-pop-up-button select {
+        .appkit-switch select {
           appearance: none;
 
           /* Label */
@@ -119,20 +119,20 @@ class NSSwitch extends HTMLElement {
           overflow: hidden;
         }
 
-        .appkit-pop-up-button select:hover,
-        .appkit-pop-up-button.active select {
+        .appkit-switch select:hover,
+        .appkit-switch.active select {
           /* .appkit-button */
           /* base */
           background: rgba(0,0,0,0.05);
         }
 
-        .appkit-pop-up-button {
+        .appkit-switch {
           position: relative;
           display: flex;
           align-items: center;
         }
 
-        .appkit-pop-up-button .indicator {
+        .appkit-switch .indicator {
           margin-left: calc(-18px - 7px);
           margin-right: 7px;
           display: flex;
@@ -148,12 +148,12 @@ class NSSwitch extends HTMLElement {
           overflow: hidden;
         }
 
-        .appkit-pop-up-button:hover .indicator,
-        .appkit-pop-up-button.active .indicator {
+        .appkit-switch:hover .indicator,
+        .appkit-switch.active .indicator {
           background-color: transparent;
         }
       </style>
-      <div class="appkit-pop-up-button">
+      <div class="appkit-switch">
         <input type="checkbox" />
         <div class="indicator">
           <svg width="7.23831177px" height="10.389328px" viewBox="0 0 7.23831177 10.389328" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
