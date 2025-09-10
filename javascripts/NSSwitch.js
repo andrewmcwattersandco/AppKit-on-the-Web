@@ -19,7 +19,7 @@ class NSSwitch extends HTMLElement {
   }
 
   set disabled(flag) {
-    this.shadowRoot.querySelector('select').toggleAttribute('disabled', Boolean(flag));
+    this.shadowRoot.querySelector('input[type="checkbox"]').toggleAttribute('disabled', Boolean(flag));
     this.toggleAttribute('disabled', Boolean(flag));
   }
 
@@ -32,7 +32,7 @@ class NSSwitch extends HTMLElement {
   }
 
   set name(value) {
-    this.shadowRoot.querySelector('select').setAttribute('name', value);
+    this.shadowRoot.querySelector('input[type="checkbox"]').setAttribute('name', value);
     this.setAttribute('name', value);
   }
 
@@ -41,34 +41,34 @@ class NSSwitch extends HTMLElement {
   }
 
   set required(flag) {
-    this.shadowRoot.querySelector('select').toggleAttribute('required', Boolean(flag));
+    this.shadowRoot.querySelector('input[type="checkbox"]').toggleAttribute('required', Boolean(flag));
     this.toggleAttribute('required', Boolean(flag));
     this.#updateValidity();
   }
 
   get value() {
-    return this.shadowRoot.querySelector('select').value;
+    return this.shadowRoot.querySelector('input[type="checkbox"]').checked;
   }
 
   set value(value) {
-    this.shadowRoot.querySelector('select').value = value;
+    this.shadowRoot.querySelector('input[type="checkbox"]').checked = value;
     this.#internals.setFormValue(value);
     this.#updateValidity();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    const select = this.shadowRoot.querySelector('select');
-    if (NSPopUpButton.observedAttributes.includes(name)) {
+    const input = this.shadowRoot.querySelector('input[type="checkbox"]');
+    if (NSSwitch.observedAttributes.includes(name)) {
       if (newValue === null) {
-        select.removeAttribute(name);
+        input.removeAttribute(name);
       } else {
-        select.setAttribute(name, newValue);
+        input.setAttribute(name, newValue);
       }
     }
 
-    if (name === 'selectedIndex' || name === 'value') {
-      const select = this.shadowRoot.querySelector('select');
-      this.#internals.setFormValue(select.value, select.value);
+    if (name === 'value') {
+      const input = this.shadowRoot.querySelector('input[type="checkbox"]');
+      this.#internals.setFormValue(input.checked, input.checked);
     }
   }
 
@@ -78,7 +78,7 @@ class NSSwitch extends HTMLElement {
 
   #updateValidity() {
     if (this.required && !this.value) {
-      this.#internals.setValidity({valueMissing: true}, 'Fill out this field', this.shadowRoot.querySelector('select'));
+      this.#internals.setValidity({valueMissing: true}, 'Fill out this field', this.shadowRoot.querySelector('input[type="checkbox"]'));
     } else {
       this.#internals.setValidity({});
     }
@@ -168,22 +168,15 @@ class NSSwitch extends HTMLElement {
       <slot></slot>
     `;
 
-    const select = shadowRoot.querySelector('select');
+    const input = shadowRoot.querySelector('input[type="checkbox"]');
     NSSwitch.observedAttributes.forEach(attr => {
       if (this.hasAttribute(attr)) {
-        select.setAttribute(attr, this.getAttribute(attr));
+        input.setAttribute(attr, this.getAttribute(attr));
       }
     });
 
-    // const select = shadowRoot.querySelector('select');
-    const slot = shadowRoot.querySelector('slot');
-    const children = slot ? slot.assignedElements() : [];
-    children.forEach(child => {
-      select.appendChild(child);
-    });
-
-    select.addEventListener('change', (event) => {
-      this.#internals.setFormValue(event.target.value, event.target.value);
+    input.addEventListener('change', (event) => {
+      this.#internals.setFormValue(event.target.checked, event.target.checked);
       this.#updateValidity();
     });
   }
