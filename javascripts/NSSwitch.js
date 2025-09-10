@@ -3,7 +3,7 @@ class NSSwitch extends HTMLElement {
   // https://webkit.org/blog/13711/elementinternals-and-form-associated-custom-elements/
   static formAssociated = true;
   // https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)
-  static observedAttributes = ['autocomplete', 'disabled', 'form', /* 'multiple', */ 'name', 'required', 'size', 'selectedIndex', 'value'];
+  static observedAttributes = ['disabled', 'form', 'name', 'required', 'value'];
 
   #internals;
 
@@ -12,15 +12,6 @@ class NSSwitch extends HTMLElement {
     this.attachShadow({mode: 'open', delegatesFocus: true});
     this.#internals = this.attachInternals();
     this.render();
-  }
-
-  get autocomplete() {
-    return this.getAttribute('autocomplete');
-  }
-
-  set autocomplete(value) {
-    this.shadowRoot.querySelector('select').setAttribute('autocomplete', value);
-    this.setAttribute('autocomplete', value);
   }
 
   get disabled() {
@@ -35,15 +26,6 @@ class NSSwitch extends HTMLElement {
   get form() {
     return this.#internals.form;
   }
-
-  // get multiple() {
-  //   return this.hasAttribute('multiple');
-  // }
-
-  // set multiple(flag) {
-  //   this.shadowRoot.querySelector('select').toggleAttribute('multiple', Boolean(flag));
-  //   this.toggleAttribute('multiple', Boolean(flag));
-  // }
 
   get name() {
     return this.getAttribute('name');
@@ -62,28 +44,6 @@ class NSSwitch extends HTMLElement {
     this.shadowRoot.querySelector('select').toggleAttribute('required', Boolean(flag));
     this.toggleAttribute('required', Boolean(flag));
     this.#updateValidity();
-  }
-
-  get size() {
-    return this.getAttribute('size');
-  }
-
-  set size(value) {
-    this.shadowRoot.querySelector('select').setAttribute('size', value);
-    this.setAttribute('size', value);
-  }
-
-  get type() {
-    return "select-one";
-  }
-
-  get selectedIndex() {
-    return this.getAttribute('selectedIndex');
-  }
-
-  set selectedIndex(value) {
-    this.shadowRoot.querySelector('select').selectedIndex = value;
-    this.#internals.setFormValue(this.value);
   }
 
   get value() {
