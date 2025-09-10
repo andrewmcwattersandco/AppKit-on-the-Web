@@ -191,7 +191,7 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   padding-top: 4px;
   padding-left: 9.5px;
   padding-bottom: 4px;
-  padding-right: calc(24px - 4px);
+  padding-right: calc(18px + 7px);
   overflow: hidden;
 }
 
@@ -209,15 +209,16 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
 }
 
 .appkit-pop-up-button .indicator {
-  margin-left: -24px;
+  margin-left: calc(-18px - 7px);
+  margin-right: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: none;
 
   /* Mask */
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   border-radius: 100px;
   background: rgba(0,0,0,0.05);
   overflow: hidden;
