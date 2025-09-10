@@ -99,6 +99,7 @@ class NSSwitch extends HTMLElement {
         .appkit-switch input {
           appearance: none;
 
+          margin: 0;
           width: 36px;
           height: 16px;
           border-radius: 100px;
@@ -112,25 +113,15 @@ class NSSwitch extends HTMLElement {
           align-items: center;
         }
 
-        .appkit-switch .indicator {
-          margin-left: calc(-18px - 7px);
-          margin-right: 7px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          pointer-events: none;
-
-          /* Mask */
-          width: 18px;
-          height: 18px;
-          border-radius: 100px;
-          background: rgba(0,0,0,0.05);
-          overflow: hidden;
-        }
-
-        .appkit-switch:hover .indicator,
-        .appkit-switch.active .indicator {
-          background-color: transparent;
+        .appkit-switch .knob {
+          margin-left: 1px;
+          margin-right: 1px;
+          position: absolute;
+          width: 21px;
+          height: 13px;
+          border-radius: 50px;
+          background: rgba(255,255,255,0.65);
+          box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.10), inset -1.75px -2.5px 2px -1.5px #FFFFFF, inset 1.75px 2.5px 1px -1.5px #FFFFFF, 0 0 1px -0.25px rgba(0,0,0,0.05), 0 0 4px -0.5px rgba(0,0,0,0.05), 0 0 44px 0 rgba(0,0,0,0.10);
         }
       </style>
       <div class="appkit-switch">
