@@ -76,22 +76,6 @@ class NSSwitch extends HTMLElement {
     this.#updateValidity();
   }
 
-  #updateWidth() {
-    // Update the width of the select element to shrink to fit the content.
-    // Create a span to measure the width of the text.
-    const select = this.shadowRoot.querySelector('select');
-    const span = document.createElement('span');
-    span.style.position = 'absolute';
-    span.style.visibility = 'hidden';
-    span.style.whiteSpace = 'nowrap';
-    span.style.font = getComputedStyle(select).font;
-    span.textContent = select.options[select.selectedIndex].text;
-    document.body.appendChild(span);
-    const width = 12 + span.offsetWidth + 12 + 18 + 7; // 12px padding-left + span + 12px padding-right + 18px indicator + 7px margin-right
-    document.body.removeChild(span);
-    select.style.width = `${width}px`;
-  }
-
   #updateValidity() {
     if (this.required && !this.value) {
       this.#internals.setValidity({valueMissing: true}, 'Fill out this field', this.shadowRoot.querySelector('select'));
@@ -170,7 +154,7 @@ class NSSwitch extends HTMLElement {
         }
       </style>
       <div class="appkit-pop-up-button">
-        <select></select>
+        <input type="checkbox" />
         <div class="indicator">
           <svg width="7.23831177px" height="10.389328px" viewBox="0 0 7.23831177 10.389328" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <g id="􀋀-Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.85">
@@ -200,11 +184,8 @@ class NSSwitch extends HTMLElement {
 
     select.addEventListener('change', (event) => {
       this.#internals.setFormValue(event.target.value, event.target.value);
-      this.#updateWidth();
       this.#updateValidity();
     });
-
-    this.#updateWidth();
   }
 }
 
