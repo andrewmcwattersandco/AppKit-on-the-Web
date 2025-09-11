@@ -229,6 +229,11 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   background-color: transparent;
 }
 
+appkit-switch {
+  display: inline-block;
+  line-height: 0;
+}
+
 /* Header */
 .appkit-form-list-row-header {
   /* font-family: SFPro-Regular; */

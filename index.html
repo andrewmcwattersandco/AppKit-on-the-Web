@@ -52,7 +52,7 @@
             <div class="leading">
               Popup
             </div>
-            <div class="trailing" style="color: rgba(0,0,0,0.50); align-content: center;">
+            <div class="trailing" style="color: rgba(0,0,0,0.50); align-items: center;">
               <appkit-pop-up-button id="unittype" name="unittype">
                 <option value=""> Label </option>
                 <option value="1"> Miner </option>
@@ -66,16 +66,23 @@
         </div>
         <div class="appkit-form-list-row">
           <div style="display: flex; justify-content: space-between;">
-            <div>
+            <div class="leading">
               Toggle
             </div>
-            <div style="align-content: center;">
-              <appkit-switch />
+            <div class="trailing" style="align-items: center;">
+              <appkit-switch checked />
             </div>
           </div>
         </div>
         <div class="appkit-form-list-row">
-          Title
+          <div style="display: flex; justify-content: space-between;">
+            <div class="leading">
+              Info Button + Toggle
+            </div>
+            <div class="trailing" style="color: rgba(0,0,0,0.50); display: inline-flex; align-items: center;">
+              <i class="bi bi-info-circle" style="margin-right: 10px"></i><appkit-switch />
+            </div>
+          </div>
         </div>
         <div class="appkit-form-list-row">
           <div style="display: flex; justify-content: space-between;">

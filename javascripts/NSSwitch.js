@@ -3,7 +3,7 @@ class NSSwitch extends HTMLElement {
   // https://webkit.org/blog/13711/elementinternals-and-form-associated-custom-elements/
   static formAssociated = true;
   // https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)
-  static observedAttributes = ['disabled', 'form', 'name', 'required', 'value'];
+  static observedAttributes = ['disabled', 'form', 'name', 'required', 'value', 'checked'];
 
   #internals;
 
@@ -116,7 +116,7 @@ class NSSwitch extends HTMLElement {
 
         .appkit-switch {
           position: relative;
-          display: flex;
+          display: inline-flex;
           align-items: center;
         }
 
