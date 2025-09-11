@@ -120,21 +120,22 @@ class NSSwitch extends HTMLElement {
         }
 
         .appkit-switch .knob {
-          margin-left: 1px;
-          margin-right: 1px;
+          margin-left: 1.5px;
+          margin-right: 1.5px;
           position: absolute;
           width: 21px;
           height: 13px;
           border-radius: 50px;
-          background: rgba(255,255,255,0.65);
+          /* background: rgba(255,255,255,0.65); */
+          background: rgba(255,255,255,1);
           box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.10), inset -1.75px -2.5px 2px -1.5px #FFFFFF, inset 1.75px 2.5px 1px -1.5px #FFFFFF, 0 0 1px -0.25px rgba(0,0,0,0.05), 0 0 4px -0.5px rgba(0,0,0,0.05), 0 0 44px 0 rgba(0,0,0,0.10);
           pointer-events: none;
         }
 
         .appkit-switch input:checked + .knob {
           margin-left: initial;
-          margin-right: 1px;
-          left: calc(100% - 22px);
+          margin-right: 1.5px;
+          left: calc(100% - 21px - 1.5px);
         }
       </style>
       <div class="appkit-switch">
