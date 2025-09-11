@@ -48,6 +48,12 @@
 
 .appkit-form-list-row .right-accessory,
 .appkit-form-list-row .trailing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0;
+  flex: none;
 }
 
 .appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-spacing))::after {
