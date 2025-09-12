@@ -140,7 +140,8 @@ class NSSwitch extends HTMLElement {
         }
 
         :host([disabled]) .appkit-switch input {
-          background: rgba(230,230,230,0.24);
+          background: rgba(0,0,0,0.03);
+          box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.02);
         }
 
         :host([disabled]) .appkit-switch input:checked {
