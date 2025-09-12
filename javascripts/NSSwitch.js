@@ -139,15 +139,15 @@ class NSSwitch extends HTMLElement {
           left: calc(100% - 2 * 1.5px - 21px);
         }
 
-        :root[disabled] .appkit-switch input {
+        :host([disabled]) .appkit-switch input {
           background: rgba(230,230,230,0.24);
         }
 
-        :root[disabled] .appkit-switch input:checked {
+        :host([disabled]) .appkit-switch input:checked {
           background: rgba(0,136,255,0.23);
         }
 
-        :root[disabled] .appkit-switch .knob {
+        :host([disabled]) .appkit-switch .knob {
           opacity: 0.5;
           border-radius: 50px;
           /* background: rgba(255,255,255,0.65); */
