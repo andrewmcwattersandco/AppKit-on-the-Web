@@ -23,10 +23,10 @@
 }
 
 .appkit-sidebar-list-section-title {
-  margin-block-start: 13px;
+  margin-block-start: 15px;
   margin-block-end: 5px;
-  margin-inline-start: 16px;
-  margin-inline-end: 16px;
+  margin-inline-start: 18px;
+  margin-inline-end: 18px;
 
   /* Section */
   opacity: 0.75;
