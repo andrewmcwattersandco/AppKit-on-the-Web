@@ -124,3 +124,11 @@
   color: #BFBFBF;
   pointer-events: none;
 }
+
+.appkit-sidebar-list-item:first-child {
+  margin-block-start: 15px;
+}
+
+.appkit-sidebar-list-item:last-child {
+  margin-block-end: 15px;
+}
