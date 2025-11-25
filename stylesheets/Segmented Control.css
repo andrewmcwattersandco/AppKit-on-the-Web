@@ -43,7 +43,8 @@
 }
 
 .appkit-segmented-control label:active {
-  background: rgba(255,255,255,0.50);
+  mix-blend-mode: plus-darker;
+  background: rgba(0,0,0,0.15);
 }
 
 .appkit-segmented-control label:has(input:disabled) {
