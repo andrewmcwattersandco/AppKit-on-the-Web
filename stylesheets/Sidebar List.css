@@ -1,5 +1,6 @@
 .appkit-sidebar {
   /* width: 240px; */
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
