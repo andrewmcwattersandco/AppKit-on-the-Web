@@ -125,12 +125,12 @@
   pointer-events: none;
 }
 
-.appkit-sidebar-list-item:first-child,
+ol .appkit-sidebar-list-item:first-child,
 a:first-child:has(> .appkit-sidebar-list-item) {
   margin-block-start: 15px;
 }
 
-.appkit-sidebar-list-item:last-child,
+ol .appkit-sidebar-list-item:last-child,
 a:last-child:has(> .appkit-sidebar-list-item) {
   margin-block-end: 15px;
 }
