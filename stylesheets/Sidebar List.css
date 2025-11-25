@@ -126,11 +126,11 @@
 }
 
 ol > .appkit-sidebar-list-item:first-child,
-a:first-child:has(> .appkit-sidebar-list-item) {
+ol > a:first-child:has(> .appkit-sidebar-list-item) {
   margin-block-start: 15px;
 }
 
 ol > .appkit-sidebar-list-item:last-child,
-a:last-child:has(> .appkit-sidebar-list-item) {
+ol > a:last-child:has(> .appkit-sidebar-list-item) {
   margin-block-end: 15px;
 }
