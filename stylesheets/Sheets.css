@@ -106,7 +106,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   border: none;
   position: relative;
   height: 36px;
-  width: 36px;
+  min-width: 36px;
   background-color: transparent;
   /* font-family: SFPro-Medium; */
   font-family: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont,
