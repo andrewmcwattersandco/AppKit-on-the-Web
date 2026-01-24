@@ -114,12 +114,17 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
     sans-serif;
   /* font-weight: medium; */
   font-weight: 500;
-  /* font-size: 13px; */
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 14px;
   color: #4C4C4C;
   text-align: center;
   appearance: none;
   border-radius: 100px;
+}
+
+.appkit-sheet .toolbar .button-group button i,
+.appkit-button-group button i {
+  font-size: 20px;
 }
 
 .appkit-sheet .toolbar .button-group button::after,
