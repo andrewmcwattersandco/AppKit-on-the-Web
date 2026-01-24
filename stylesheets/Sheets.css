@@ -139,7 +139,10 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
 .appkit-sheet .toolbar .button-group button.primary,
 .appkit-button-group button.primary {
   /* Digital Color Meter */
-  color: rgba(0, 109, 238, 1.00);
+  /* Measured */
+  /* color: rgba(0, 109, 238, 1.00); */
+  /* Actual */
+  color: rgba(0, 120, 241, 1.00);
 }
 
 .appkit-sheet .toolbar .button-group button::after,
