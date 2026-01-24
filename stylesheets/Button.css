@@ -13,7 +13,7 @@
 
   /* base */
   /* --background-color: rgba(0,0,0,0.05); */
-  --background-color: rgba(0,0,0,0.08);
+  --background-color: rgba(0,0,0,0.075);
   /* background: #FFFFFF; */
   background: var(--background-color);
   border-width: 0;
