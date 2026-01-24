@@ -142,7 +142,7 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   /* Measured */
   /* color: rgba(0, 109, 238, 1.00); */
   /* Actual */
-  color: rgba(0, 120, 241, 1.00);
+  color: rgba(0, 120, 240, 1.00);
 }
 
 .appkit-sheet .toolbar .button-group button::after,
