@@ -50,11 +50,11 @@
     /* Label */
     color: #FF383C;
 
-  --background-color: rgba(255, 56, 60, 0.25);
+  --background-color: rgba(255, 56, 60, 0.049);
 }
 
 .appkit-button.destructive:active {
-  --background-color: hsla(from rgba(255, 56, 60, 0.25) h s calc(l - 6) a);
+  --background-color: rgba(255, 56, 60, 0.25);
 }
 
 .appkit-button.secondary {
