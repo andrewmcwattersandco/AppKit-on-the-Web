@@ -136,6 +136,11 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   padding-right: 8px;
 }
 
+.appkit-sheet .toolbar .button-group button.primary,
+.appkit-button-group button.primary {
+  color: rgba(0, 136, 255, 1.00);
+}
+
 .appkit-sheet .toolbar .button-group button::after,
 .appkit-button-group button::after {
   position: absolute;
