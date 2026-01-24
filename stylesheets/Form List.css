@@ -260,8 +260,8 @@ appkit-switch {
   margin-top: 0;
   padding: 0;
   padding-bottom: 0;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  background: rgba(0,0,0,0.05);
+  border-top: 0.5px solid rgba(0,0,0,0.05);
+  background: rgba(0,0,0,0.029);
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -284,10 +284,10 @@ appkit-switch {
 .appkit-form-list-row.footer button.add:has(+ button.remove)::after {
   display: inline-block;
   position: absolute;
-  top: 2px;
+  top: 3px;
   right: 0;
   width: 1px;
-  height: calc(100% - 2 * 2px);
+  height: calc(100% - 2 * 3px);
   content: "";
 
   /* Right Accessory */
@@ -295,7 +295,7 @@ appkit-switch {
     /* Sketch */
     /* background: rgba(0,0,0,0.03); */
     /* Digital Color Meter */
-    background: rgba(0,0,0,0.099);
+    background: rgba(0,0,0,0.0625);
 }
 
 .appkit-form-list-row.footer button.add:active,
