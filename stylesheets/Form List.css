@@ -160,8 +160,8 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
       /* border: 0.5px solid rgba(0,0,0,0.03); */
       border: none;
       border-radius: 6px;
-      padding-top: 2px;
-      padding-bottom: 3px;
+      padding-top: 0;
+      padding-bottom: 0;
       background-color: transparent;
       outline-style: none;
 }
