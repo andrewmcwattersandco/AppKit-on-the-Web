@@ -51,11 +51,22 @@
 }
 
 .appkit-sidebar-list-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Sidebar/Small/Items/Level 0 - Default */
+.appkit-sidebar.small .appkit-sidebar-list-item {
   margin-inline-start: 10px;
   margin-inline-end: 10px;
-  display: flex;
   height: 24px;
-  align-items: center;
+}
+
+/* Sidebar/Medium/Items/Level 0 - Default */
+.appkit-sidebar.medium .appkit-sidebar-list-item {
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+  height: 32px;
 }
 
 .appkit-sidebar-list-item .left-accessory,
