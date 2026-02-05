@@ -93,6 +93,7 @@ class NSPopUpButton extends HTMLElement {
   set value(value) {
     this.shadowRoot.querySelector('select').value = value;
     this.#internals.setFormValue(value);
+    this.#updateWidth();
     this.#updateValidity();
   }
 
