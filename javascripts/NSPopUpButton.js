@@ -126,7 +126,8 @@ class NSPopUpButton extends HTMLElement {
     span.style.visibility = 'hidden';
     span.style.whiteSpace = 'nowrap';
     span.style.font = getComputedStyle(select).font;
-    span.textContent = select.options[select.selectedIndex].text;
+    const option = select.options[select.selectedIndex];
+    span.textContent = option ? option.text : '';
     document.body.appendChild(span);
     const width = 12 + span.offsetWidth + 12 + 18 + 7; // 12px padding-left + span + 12px padding-right + 18px indicator + 7px margin-right
     document.body.removeChild(span);
