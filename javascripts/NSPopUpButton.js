@@ -209,6 +209,10 @@ class NSPopUpButton extends HTMLElement {
         .appkit-pop-up-button.active .indicator {
           background-color: transparent;
         }
+
+        .appkit-pop-up-button:disabled {
+          pointer-events: none;
+        }
       </style>
       <div class="appkit-pop-up-button">
         <select></select>
