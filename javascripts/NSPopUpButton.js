@@ -210,7 +210,7 @@ class NSPopUpButton extends HTMLElement {
           background-color: transparent;
         }
 
-        .appkit-pop-up-button:disabled {
+        :host([disabled]) {
           pointer-events: none;
         }
       </style>

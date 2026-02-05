@@ -233,9 +233,9 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   background-color: transparent;
 }
 
-.appkit-pop-up-button:disabled {
+/* :host([disabled]) {
   pointer-events: none;
-}
+} */
 
 appkit-switch {
   display: inline-block;
