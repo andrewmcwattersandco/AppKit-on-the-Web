@@ -245,6 +245,7 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   /* Mask */
   width: 18px;
   height: 18px;
+  border-radius: 100px;
   /* background: rgba(0,0,0,0.05); */
   overflow: hidden;
 }
