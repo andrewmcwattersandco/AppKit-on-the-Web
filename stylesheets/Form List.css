@@ -216,7 +216,8 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
   background: rgba(0,0,0,0.05);
 }
 
-.appkit-pop-up-button {
+.appkit-pop-up-button,
+.appkit-pop-up-button-select {
   position: relative;
   display: flex;
   align-items: center;
