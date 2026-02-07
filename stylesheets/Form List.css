@@ -176,7 +176,8 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
     margin-left: 3px;
 }
 
-.appkit-pop-up-button select {
+.appkit-pop-up-button select,
+.appkit-pop-up-button-select {
   appearance: none;
 
   /* Label */
@@ -200,7 +201,9 @@ button.appkit-form-list-row:not(:last-child):not(:has(+ .appkit-form-list-row-sp
 }
 
 .appkit-pop-up-button select:hover,
-.appkit-pop-up-button.active select {
+.appkit-pop-up-button-select:hover,
+.appkit-pop-up-button.active select,
+.appkit-pop-up-button-select.active {
   /* .appkit-button */
   /* base */
   background: rgba(0,0,0,0.05);

@@ -154,7 +154,8 @@ class NSPopUpButton extends HTMLElement {
     const { shadowRoot } = this;
     shadowRoot.innerHTML = /* html */ `
       <style>
-        .appkit-pop-up-button select {
+        .appkit-pop-up-button select,
+        .appkit-pop-up-button-select {
           appearance: none;
 
           /* Label */
@@ -178,7 +179,9 @@ class NSPopUpButton extends HTMLElement {
         }
 
         .appkit-pop-up-button select:hover,
-        .appkit-pop-up-button.active select {
+        .appkit-pop-up-button-select:hover,
+        .appkit-pop-up-button.active select,
+        .appkit-pop-up-button-select.active {
           /* .appkit-button */
           /* base */
           background: rgba(0,0,0,0.05);
