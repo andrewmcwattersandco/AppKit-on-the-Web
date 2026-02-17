@@ -55,6 +55,7 @@
   margin-inline-end: 10px;
   display: flex;
   align-items: center;
+  color: rgba(0,0,0,0.85);
 }
 
 /* Sidebar/Small/Items/Level 0 - Default */
@@ -91,7 +92,6 @@
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   font-weight: 500;
-  color: rgba(0,0,0,0.85);
   text-align: center;
   line-height: 16px;
 }
@@ -130,7 +130,6 @@
     sans-serif;
   font-weight: normal;
   font-size: 13px;
-  color: #4C4C4C;
   line-height: 16px;
 }
 
