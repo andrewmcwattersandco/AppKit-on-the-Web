@@ -76,8 +76,7 @@
 .appkit-sidebar-list-item .trailing {
 }
 
-.appkit-sidebar-list-item .icon,
-.appkit-sidebar-list-item input[type="checkbox"] {
+.appkit-sidebar-list-item .leading {
   display: inline-block;
   margin-block-start: 4px;
   margin-block-end: 4px;
@@ -97,16 +96,14 @@
   line-height: 16px;
 }
 
-.appkit-sidebar.small .appkit-sidebar-list-item .icon,
-.appkit-sidebar.small .appkit-sidebar-list-item input[type="checkbox"] {
+.appkit-sidebar.small .appkit-sidebar-list-item .leading {
   /* Sidebar/_X/Small/L1/Leading/Symbol */
   width: 20px;
   /* height: 16px; */
   font-size: 11px;
 }
 
-.appkit-sidebar.medium .appkit-sidebar-list-item .icon,
-.appkit-sidebar.medium .appkit-sidebar-list-item input[type="checkbox"] {
+.appkit-sidebar.medium .appkit-sidebar-list-item .leading {
   /* Sidebar/_X/Medium/L1/Leading/Symbol */
   width: 22px;
   /* height: 32px; */
@@ -137,8 +134,7 @@
   line-height: 16px;
 }
 
-.appkit-sidebar-list-item .icon + .label,
-.appkit-sidebar-list-item input[type="checkbox"] + .label {
+.appkit-sidebar-list-item .leading + .label {
   margin-inline-start: 0px;
 }
 
