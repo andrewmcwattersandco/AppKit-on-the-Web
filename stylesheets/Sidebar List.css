@@ -84,6 +84,7 @@
   margin-inline-start: 9px;
   margin-inline-end: 9px;
   width: 13px;
+  flex-grow: 0;
 
   /* font-family: SFPro-Medium; */
   font-family: "SF Pro Text", system-ui, -apple-system, BlinkMacSystemFont,
