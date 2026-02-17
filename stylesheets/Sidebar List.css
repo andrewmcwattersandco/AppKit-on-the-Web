@@ -58,6 +58,10 @@
   color: rgba(0,0,0,0.85);
 }
 
+.appkit-sidebar-list-item a {
+  color: inherit;
+}
+
 /* Sidebar/Small/Items/Level 0 - Default */
 .appkit-sidebar.small .appkit-sidebar-list-item {
   height: 24px;
@@ -145,6 +149,10 @@
   background: rgba(0,0,0,0.055);
   color: rgba(0, 136, 255, 1.00);
   border-radius: 8px;
+}
+
+.appkit-sidebar-list-item.selected a {
+  color: rgba(0, 136, 255, 1.00);
 }
 
 .appkit-sidebar-list-item.disabled,
