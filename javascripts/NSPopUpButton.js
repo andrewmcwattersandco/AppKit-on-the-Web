@@ -264,7 +264,7 @@ class NSPopUpButton extends HTMLElement {
 </div>
 <slot></slot>`;
 
-    const template = this.querySelector('template');
+    const template = shadowRoot.querySelector('template');
     if (!NSPopUpButton.sheet) {
       const style = template.content.querySelector('style');
       const sheet = new CSSStyleSheet();
