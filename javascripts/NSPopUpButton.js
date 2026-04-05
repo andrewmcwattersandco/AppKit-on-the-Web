@@ -269,9 +269,9 @@ class NSPopUpButton extends HTMLElement {
       const style = template.content.querySelector('style');
       const sheet = new CSSStyleSheet();
       sheet.replaceSync(style.textContent);
-      shadowRoot.adoptedStyleSheets.push(sheet);
       NSPopUpButton.sheet = sheet;
     }
+    shadowRoot.adoptedStyleSheets.push(NSPopUpButton.sheet);
     template.remove();
 
     const select = shadowRoot.querySelector('select');
