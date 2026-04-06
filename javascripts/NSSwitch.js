@@ -108,74 +108,84 @@ class NSSwitch extends HTMLElement {
 
   render() {
     const { shadowRoot } = this;
-    shadowRoot.innerHTML = /* html */ `
-      <style>
-        .appkit-switch input {
-          appearance: none;
+    shadowRoot.innerHTML = /* html */ `<template>
+  <style>
+    .appkit-switch input {
+      appearance: none;
 
-          margin: 0;
-          width: 36px;
-          height: 16px;
-          border-radius: 100px;
-          background: rgba(0,0,0,0.03);
-          box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.06);
-          overflow: hidden;
-          transition: background 0.25s ease-out, box-shadow 0.25s ease-out;
-        }
+      margin: 0;
+      width: 36px;
+      height: 16px;
+      border-radius: 100px;
+      background: rgba(0,0,0,0.03);
+      box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.06);
+      overflow: hidden;
+      transition: background 0.25s ease-out, box-shadow 0.25s ease-out;
+    }
 
-        .appkit-switch input:checked {
-          background: rgba(0,136,255,1);
-          box-shadow: initial;
-        }
+    .appkit-switch input:checked {
+      background: rgba(0,136,255,1);
+      box-shadow: initial;
+    }
 
-        .appkit-switch {
-          position: relative;
-          display: inline-flex;
-          align-items: center;
-        }
+    .appkit-switch {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
 
-        .appkit-switch .knob {
-          margin-left: 1.5px;
-          margin-right: 1.5px;
-          position: absolute;
-          width: 21px;
-          height: 13px;
-          border-radius: 50px;
-          /* background: rgba(255,255,255,0.65); */
-          background: rgba(255,255,255,1);
-          box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.10), inset -1.75px -2.5px 2px -1.5px #FFFFFF, inset 1.75px 2.5px 1px -1.5px #FFFFFF, 0 0 1px -0.25px rgba(0,0,0,0.05), 0 0 4px -0.5px rgba(0,0,0,0.05), 0 0 44px 0 rgba(0,0,0,0.10);
-          pointer-events: none;
-          transition: left 0.25s ease-out;
-          left: 0;
-        }
+    .appkit-switch .knob {
+      margin-left: 1.5px;
+      margin-right: 1.5px;
+      position: absolute;
+      width: 21px;
+      height: 13px;
+      border-radius: 50px;
+      /* background: rgba(255,255,255,0.65); */
+      background: rgba(255,255,255,1);
+      box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.10), inset -1.75px -2.5px 2px -1.5px #FFFFFF, inset 1.75px 2.5px 1px -1.5px #FFFFFF, 0 0 1px -0.25px rgba(0,0,0,0.05), 0 0 4px -0.5px rgba(0,0,0,0.05), 0 0 44px 0 rgba(0,0,0,0.10);
+      pointer-events: none;
+      transition: left 0.25s ease-out;
+      left: 0;
+    }
 
-        .appkit-switch input:checked + .knob {
-          left: calc(100% - 2 * 1.5px - 21px);
-        }
+    .appkit-switch input:checked + .knob {
+      left: calc(100% - 2 * 1.5px - 21px);
+    }
 
-        :host([disabled]) .appkit-switch input {
-          background: rgba(0,0,0,0.03);
-          box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.02);
-        }
+    :host([disabled]) .appkit-switch input {
+      background: rgba(0,0,0,0.03);
+      box-shadow: inset 0 0 1px 0 rgba(0,0,0,0.02);
+    }
 
-        :host([disabled]) .appkit-switch input:checked {
-          background: rgba(0,136,255,0.23);
-        }
+    :host([disabled]) .appkit-switch input:checked {
+      background: rgba(0,136,255,0.23);
+    }
 
-        :host([disabled]) .appkit-switch .knob {
-          opacity: 0.5;
-          border-radius: 50px;
-          /* background: rgba(255,255,255,0.65); */
-          background: rgba(255,255,255,1);
-          box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.10), inset -1.75px -2.5px 2px -1.5px #FFFFFF, inset 1.75px 2.5px 1px -1.5px #FFFFFF, 0 0 1px -0.25px rgba(0,0,0,0.05), 0 0 4px -0.5px rgba(0,0,0,0.05), 0 0 44px 0 rgba(0,0,0,0.10);
-        }
-      </style>
-      <div class="appkit-switch">
-        <input type="checkbox" />
-        <div class="knob">
-        </div>
-      </div>
-    `;
+    :host([disabled]) .appkit-switch .knob {
+      opacity: 0.5;
+      border-radius: 50px;
+      /* background: rgba(255,255,255,0.65); */
+      background: rgba(255,255,255,1);
+      box-shadow: inset 0 0 1px 0 rgba(255,255,255,0.10), inset -1.75px -2.5px 2px -1.5px #FFFFFF, inset 1.75px 2.5px 1px -1.5px #FFFFFF, 0 0 1px -0.25px rgba(0,0,0,0.05), 0 0 4px -0.5px rgba(0,0,0,0.05), 0 0 44px 0 rgba(0,0,0,0.10);
+    }
+  </style>
+</template>
+<div class="appkit-switch">
+  <input type="checkbox" />
+  <div class="knob">
+  </div>
+</div>`;
+
+    const template = shadowRoot.querySelector('template');
+    if (!NSSwitch.sheet) {
+      const style = template.content.querySelector('style');
+      const sheet = new CSSStyleSheet();
+      sheet.replaceSync(style.textContent);
+      NSSwitch.sheet = sheet;
+    }
+    shadowRoot.adoptedStyleSheets.push(NSSwitch.sheet);
+    template.remove();
 
     const input = shadowRoot.querySelector('input[type="checkbox"]');
     NSSwitch.observedAttributes.forEach(attr => {
