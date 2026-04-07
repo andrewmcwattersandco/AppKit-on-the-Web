@@ -3,7 +3,7 @@ class NSSwitch extends HTMLElement {
   // https://webkit.org/blog/13711/elementinternals-and-form-associated-custom-elements/
   static formAssociated = true;
   // https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)
-  static observedAttributes = ['disabled', 'form', 'name', 'required', 'value', 'checked', 'onchange'];
+  static observedAttributes = ['disabled', 'form', 'name', 'required', 'value', 'checked'];
 
   #internals;
 
@@ -70,23 +70,9 @@ class NSSwitch extends HTMLElement {
     this.#updateValidity();
   }
 
-  get onchange() {
-    return this._onchange || null;
-  }
-
-  set onchange(value) {
-    this._onchange = value;
-    if (typeof value === 'string') {
-      this.setAttribute('onchange', value);
-    } else if (value === null || value === undefined) {
-      this.removeAttribute('onchange');
-      this._onchange = null;
-    }
-  }
-
   attributeChangedCallback(name, oldValue, newValue) {
     const input = this.shadowRoot.querySelector('input[type="checkbox"]');
-    if (NSSwitch.observedAttributes.includes(name) && name !== 'onchange') {
+    if (NSSwitch.observedAttributes.includes(name)) {
       if (newValue === null) {
         input.removeAttribute(name);
       } else {
@@ -203,7 +189,7 @@ class NSSwitch extends HTMLElement {
 
     const input = shadowRoot.querySelector('input[type="checkbox"]');
     NSSwitch.observedAttributes.forEach(attr => {
-      if (this.hasAttribute(attr) && attr !== 'onchange') {
+      if (this.hasAttribute(attr)) {
         input.setAttribute(attr, this.getAttribute(attr));
       }
     });
@@ -211,24 +197,6 @@ class NSSwitch extends HTMLElement {
     input.addEventListener('change', (event) => {
       this.#internals.setFormValue(event.target.checked ? (event.target.value || 'on') : null);
       this.#updateValidity();
-
-      if (typeof this._onchange === 'function') {
-        try {
-          this._onchange.call(this, event);
-        } catch (e) {
-          console.error(e);
-        }
-      } else {
-        const onchangeAttr = this.getAttribute('onchange');
-        if (onchangeAttr) {
-          try {
-            const onchangeFunc = new Function('event', onchangeAttr);
-            onchangeFunc.call(this, event);
-          } catch (e) {
-            console.error(e);
-          }
-        }
-      }
 
       this.dispatchEvent(new Event('change', { bubbles: true }));
     });
