@@ -47,12 +47,26 @@ class NSSwitch extends HTMLElement {
   }
 
   get value() {
-    return this.shadowRoot.querySelector('input[type="checkbox"]').checked;
+    const input = this.shadowRoot.querySelector('input[type="checkbox"]');
+    return input.checked ? (input.value || 'on') : null;
   }
 
   set value(value) {
-    this.shadowRoot.querySelector('input[type="checkbox"]').checked = value;
-    this.#internals.setFormValue(value);
+    const input = this.shadowRoot.querySelector('input[type="checkbox"]');
+    input.value = value;
+    this.#internals.setFormValue(input.checked ? (input.value || 'on') : null);
+    this.#updateValidity();
+  }
+
+  get checked() {
+    return this.shadowRoot.querySelector('input[type="checkbox"]').checked;
+  }
+
+  set checked(flag) {
+    this.shadowRoot.querySelector('input[type="checkbox"]').checked = Boolean(flag);
+    this.toggleAttribute('checked', Boolean(flag));
+    const input = this.shadowRoot.querySelector('input[type="checkbox"]');
+    this.#internals.setFormValue(input.checked ? (input.value || 'on') : null);
     this.#updateValidity();
   }
 
@@ -82,7 +96,7 @@ class NSSwitch extends HTMLElement {
 
     if (name === 'value') {
       const input = this.shadowRoot.querySelector('input[type="checkbox"]');
-      this.#internals.setFormValue(input.checked, input.checked);
+      this.#internals.setFormValue(input.checked ? (input.value || 'on') : null);
     }
   }
 
@@ -91,7 +105,7 @@ class NSSwitch extends HTMLElement {
   }
 
   #updateValidity() {
-    if (this.required && !this.value) {
+    if (this.required && !this.checked) {
       this.#internals.setValidity({valueMissing: true}, 'Fill out this field', this.shadowRoot.querySelector('input[type="checkbox"]'));
     } else {
       this.#internals.setValidity({});
@@ -195,7 +209,7 @@ class NSSwitch extends HTMLElement {
     });
 
     input.addEventListener('change', (event) => {
-      this.#internals.setFormValue(event.target.checked, event.target.checked);
+      this.#internals.setFormValue(event.target.checked ? (event.target.value || 'on') : null);
       this.#updateValidity();
 
       if (typeof this._onchange === 'function') {
