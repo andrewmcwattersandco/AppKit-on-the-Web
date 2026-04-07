@@ -78,11 +78,11 @@ class NSPopUpButton extends HTMLElement {
   }
 
   get selectedIndex() {
-    return this.getAttribute('selectedIndex');
+    return this.shadowRoot.querySelector('select').selectedIndex;
   }
 
   set selectedIndex(value) {
-    this.shadowRoot.querySelector('select').selectedIndex = value;
+    this.shadowRoot.querySelector('select').selectedIndex = Number(value);
     this.#internals.setFormValue(this.value);
   }
 
