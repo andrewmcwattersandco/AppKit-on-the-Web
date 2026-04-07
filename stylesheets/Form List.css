@@ -11,6 +11,13 @@
   align-self: stretch;
   background: rgba(0,0,0,0.03);
   overflow: hidden;
+
+  /* 5.1. Pointer interaction */
+  cursor: default;
+
+  /* 6.1. Controlling content selection */
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
 }
 
 .appkit-form-list-row {
