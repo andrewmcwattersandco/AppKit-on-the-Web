@@ -28,8 +28,9 @@
       <!-- <img class="header-image" src="images/No App Icon@2x.png" alt="No App Icon" width="64" height="64"> -->
       <img class="header-image" src="/images/Passwords_Normal@2x.png" alt="Passwords Icon" width="64" height="64" style="padding: 0; margin-top: -5.5px; margin-left: -5.5px;">
       <h1 class="title">
-        Sign into <script>document.write(location.host);</script>
+        Sign into <span id="host"></span>
       </h1>
+      <script>document.getElementById('host').textContent = location.host;</script>
       <p class="description">
         Sign in to continue.
       </p>
