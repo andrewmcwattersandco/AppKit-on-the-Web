@@ -11,6 +11,7 @@ class NSSwitch extends HTMLElement {
     super();
     this.attachShadow({mode: 'open', delegatesFocus: true});
     this.#internals = this.attachInternals();
+    this.#internals.role = 'switch';
     this.render();
   }
 
@@ -68,6 +69,7 @@ class NSSwitch extends HTMLElement {
     const input = this.shadowRoot.querySelector('input[type="checkbox"]');
     this.#internals.setFormValue(input.checked ? (input.value || 'on') : null);
     this.#updateValidity();
+    this.#updateAriaChecked();
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -88,6 +90,7 @@ class NSSwitch extends HTMLElement {
 
   connectedCallback() {
     this.#updateValidity();
+    this.#updateAriaChecked();
   }
 
   #updateValidity() {
@@ -96,6 +99,10 @@ class NSSwitch extends HTMLElement {
     } else {
       this.#internals.setValidity({});
     }
+  }
+
+  #updateAriaChecked() {
+    this.#internals.ariaChecked = String(this.checked);
   }
 
   checkValidity() {
@@ -197,6 +204,7 @@ class NSSwitch extends HTMLElement {
     input.addEventListener('change', (event) => {
       this.#internals.setFormValue(event.target.checked ? (event.target.value || 'on') : null);
       this.#updateValidity();
+      this.#updateAriaChecked();
 
       this.dispatchEvent(new Event('change', { bubbles: true }));
     });

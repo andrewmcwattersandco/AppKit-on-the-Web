@@ -11,6 +11,7 @@ class NSPopUpButton extends HTMLElement {
     super();
     this.attachShadow({mode: 'open', delegatesFocus: true});
     this.#internals = this.attachInternals();
+    this.#internals.role = 'combobox';
     this.render();
   }
 
