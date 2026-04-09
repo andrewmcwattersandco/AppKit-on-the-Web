@@ -11,7 +11,10 @@
   align-self: stretch;
   background: rgba(0,0,0,0.03);
   overflow: hidden;
+}
 
+.appkit-form-list,
+.appkit-form-list-row-header {
   /* 5.1. Pointer interaction */
   cursor: default;
 
