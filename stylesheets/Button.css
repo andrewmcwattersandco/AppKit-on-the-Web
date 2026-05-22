@@ -30,7 +30,7 @@
 .appkit-button:active {
   /* base */
   /* background: #F0F0F0; */
-  background: hsl(from var(--background-color) h s calc(l - 6));
+  --background-color: rgba(0,0,0,0.15);
 }
 
 .appkit-button.primary {
