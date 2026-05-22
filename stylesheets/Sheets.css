@@ -82,7 +82,8 @@ dialog.appkit-sheet:has(.sidebar):not([open]) {
   padding: 8px;
   flex: none;
   align-self: stretch;
-  overflow: hidden;
+  /* UNDONE: Hides the `box-shadow` of `.button-group` */
+  /* overflow: hidden; */
 }
 
 .appkit-sheet .toolbar .button-group,
